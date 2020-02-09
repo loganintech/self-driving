@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Dev/devel
+
+Name: drive_control
+Description: Description of drive_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

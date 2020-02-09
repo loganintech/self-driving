@@ -1,0 +1,2 @@
+drive_control:read_mavlink:rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/Dev/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Dev/install -G Unix Makefiles

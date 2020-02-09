@@ -1,0 +1,3 @@
+<launch>
+    <node name="reader" pkg="read_mavlink" type="read_mavlink.py"/>
+</launch>
