@@ -67,14 +67,14 @@ set(drive_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(drive_control_SOURCE_PREFIX /home/nvidia/Dev/src/drive_control)
-  set(drive_control_DEVEL_PREFIX /home/nvidia/Dev/devel)
+  set(drive_control_SOURCE_PREFIX /home/nvidia/Dev/workspace/src/drive_control)
+  set(drive_control_DEVEL_PREFIX /home/nvidia/Dev/workspace/devel)
   set(drive_control_INSTALL_PREFIX "")
   set(drive_control_PREFIX ${drive_control_DEVEL_PREFIX})
 else()
   set(drive_control_SOURCE_PREFIX "")
   set(drive_control_DEVEL_PREFIX "")
-  set(drive_control_INSTALL_PREFIX /home/nvidia/Dev/install)
+  set(drive_control_INSTALL_PREFIX /home/nvidia/Dev/workspace/install)
   set(drive_control_PREFIX ${drive_control_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nvidia/Dev/install/lib;/home/nvidia/Dev/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/nvidia/Dev/workspace/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,4 +1,4 @@
-prefix=/home/nvidia/Dev/install
+prefix=/home/nvidia/Dev/workspace/install
 
 Name: drive_control
 Description: Description of drive_control

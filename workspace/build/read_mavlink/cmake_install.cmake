@@ -1,8 +1,8 @@
-# Install script for directory: /home/nvidia/Dev/src/read_mavlink
+# Install script for directory: /home/nvidia/Dev/workspace/src/read_mavlink
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Dev/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Dev/workspace/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Dev/build/read_mavlink/catkin_generated/installspace/read_mavlink.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Dev/workspace/build/read_mavlink/catkin_generated/installspace/read_mavlink.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/read_mavlink/cmake" TYPE FILE FILES
-    "/home/nvidia/Dev/build/read_mavlink/catkin_generated/installspace/read_mavlinkConfig.cmake"
-    "/home/nvidia/Dev/build/read_mavlink/catkin_generated/installspace/read_mavlinkConfig-version.cmake"
+    "/home/nvidia/Dev/workspace/build/read_mavlink/catkin_generated/installspace/read_mavlinkConfig.cmake"
+    "/home/nvidia/Dev/workspace/build/read_mavlink/catkin_generated/installspace/read_mavlinkConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/read_mavlink" TYPE FILE FILES "/home/nvidia/Dev/src/read_mavlink/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/read_mavlink" TYPE FILE FILES "/home/nvidia/Dev/workspace/src/read_mavlink/package.xml")
 endif()
 

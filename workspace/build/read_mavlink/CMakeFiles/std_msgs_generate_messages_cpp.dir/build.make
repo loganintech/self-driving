@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Dev/src
+CMAKE_SOURCE_DIR = /home/nvidia/Dev/workspace/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Dev/build
+CMAKE_BINARY_DIR = /home/nvidia/Dev/workspace/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_gener
 .PHONY : read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/nvidia/Dev/build/read_mavlink && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/nvidia/Dev/workspace/build/read_mavlink && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/nvidia/Dev/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Dev/src /home/nvidia/Dev/src/read_mavlink /home/nvidia/Dev/build /home/nvidia/Dev/build/read_mavlink /home/nvidia/Dev/build/read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Dev/workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Dev/workspace/src /home/nvidia/Dev/workspace/src/read_mavlink /home/nvidia/Dev/workspace/build /home/nvidia/Dev/workspace/build/read_mavlink /home/nvidia/Dev/workspace/build/read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : read_mavlink/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/nvidia/Dev/src
-# Build directory: /home/nvidia/Dev/build
+# Source directory: /home/nvidia/Dev/workspace/src
+# Build directory: /home/nvidia/Dev/workspace/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

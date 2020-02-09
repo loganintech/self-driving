@@ -1,4 +1,4 @@
-prefix=/home/nvidia/Dev/devel
+prefix=/home/nvidia/Dev/workspace/devel
 
 Name: rplidar_ros
 Description: Description of rplidar_ros

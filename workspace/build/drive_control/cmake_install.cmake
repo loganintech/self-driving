@@ -1,8 +1,8 @@
-# Install script for directory: /home/nvidia/Dev/src/drive_control
+# Install script for directory: /home/nvidia/Dev/workspace/src/drive_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Dev/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Dev/workspace/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Dev/build/drive_control/catkin_generated/installspace/drive_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Dev/workspace/build/drive_control/catkin_generated/installspace/drive_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drive_control/cmake" TYPE FILE FILES
-    "/home/nvidia/Dev/build/drive_control/catkin_generated/installspace/drive_controlConfig.cmake"
-    "/home/nvidia/Dev/build/drive_control/catkin_generated/installspace/drive_controlConfig-version.cmake"
+    "/home/nvidia/Dev/workspace/build/drive_control/catkin_generated/installspace/drive_controlConfig.cmake"
+    "/home/nvidia/Dev/workspace/build/drive_control/catkin_generated/installspace/drive_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drive_control" TYPE FILE FILES "/home/nvidia/Dev/src/drive_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drive_control" TYPE FILE FILES "/home/nvidia/Dev/workspace/src/drive_control/package.xml")
 endif()
 

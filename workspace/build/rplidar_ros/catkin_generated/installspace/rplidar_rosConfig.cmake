@@ -67,14 +67,14 @@ set(rplidar_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rplidar_ros_SOURCE_PREFIX /home/nvidia/Dev/src/rplidar_ros)
-  set(rplidar_ros_DEVEL_PREFIX /home/nvidia/Dev/devel)
+  set(rplidar_ros_SOURCE_PREFIX /home/nvidia/Dev/workspace/src/rplidar_ros)
+  set(rplidar_ros_DEVEL_PREFIX /home/nvidia/Dev/workspace/devel)
   set(rplidar_ros_INSTALL_PREFIX "")
   set(rplidar_ros_PREFIX ${rplidar_ros_DEVEL_PREFIX})
 else()
   set(rplidar_ros_SOURCE_PREFIX "")
   set(rplidar_ros_DEVEL_PREFIX "")
-  set(rplidar_ros_INSTALL_PREFIX /home/nvidia/Dev/install)
+  set(rplidar_ros_INSTALL_PREFIX /home/nvidia/Dev/workspace/install)
   set(rplidar_ros_PREFIX ${rplidar_ros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nvidia/Dev/install/lib;/home/nvidia/Dev/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/nvidia/Dev/workspace/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
