@@ -657,3 +657,174 @@ Linking C executable cmTC_8d559
 make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
 
 
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75294/fast"
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_75294.dir/build.make CMakeFiles/cmTC_75294.dir/build
+make[2]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_75294.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_75294.dir/src.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_75294
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75294.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_SUPPORTS_CXX11    -rdynamic CMakeFiles/cmTC_75294.dir/src.cxx.o  -o cmTC_75294 
+make[2]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5b0c9/fast"
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5b0c9.dir/build.make CMakeFiles/cmTC_5b0c9.dir/build
+make[2]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b0c9.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_5b0c9.dir/src.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5b0c9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b0c9.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_SUPPORTS_CXX0X    -rdynamic CMakeFiles/cmTC_5b0c9.dir/src.cxx.o  -o cmTC_5b0c9 
+make[2]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the function XOpenDisplay exists in the /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a044/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a044.dir/build.make CMakeFiles/cmTC_0a044.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a044.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_0a044.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0a044
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a044.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_0a044.dir/CheckFunctionExists.c.o  -o cmTC_0a044 /usr/lib/aarch64-linux-gnu/libX11.so /usr/lib/aarch64-linux-gnu/libXext.so 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e42b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e42b.dir/build.make CMakeFiles/cmTC_1e42b.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e42b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_1e42b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1e42b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e42b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_1e42b.dir/CheckFunctionExists.c.o  -o cmTC_1e42b 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a70c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a70c.dir/build.make CMakeFiles/cmTC_8a70c.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8a70c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_8a70c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8a70c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a70c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_8a70c.dir/CheckFunctionExists.c.o  -o cmTC_8a70c 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b687/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b687.dir/build.make CMakeFiles/cmTC_3b687.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b687.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_3b687.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b687
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b687.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_3b687.dir/CheckFunctionExists.c.o  -o cmTC_3b687 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5835b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5835b.dir/build.make CMakeFiles/cmTC_5835b.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5835b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_5835b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5835b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5835b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_5835b.dir/CheckFunctionExists.c.o  -o cmTC_5835b 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34feb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34feb.dir/build.make CMakeFiles/cmTC_34feb.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34feb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_34feb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_34feb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34feb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_34feb.dir/CheckFunctionExists.c.o  -o cmTC_34feb -lICE 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a9e9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a9e9.dir/build.make CMakeFiles/cmTC_3a9e9.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a9e9.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY   -fvisibility=hidden -o CMakeFiles/cmTC_3a9e9.dir/src.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3a9e9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a9e9.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_HIDDEN_VISIBILITY    -rdynamic CMakeFiles/cmTC_3a9e9.dir/src.cxx.o  -o cmTC_3a9e9 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5b388/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5b388.dir/build.make CMakeFiles/cmTC_5b388.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b388.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_5b388.dir/src.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5b388
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b388.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY    -rdynamic CMakeFiles/cmTC_5b388.dir/src.cxx.o  -o cmTC_5b388 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_787c2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_787c2.dir/build.make CMakeFiles/cmTC_787c2.dir/build
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_787c2.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_787c2.dir/src.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx
+/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx:2:34: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+     int main() { return somefunc();}
+                                  ^
+/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^~~~~~~~
+Linking CXX executable cmTC_787c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_787c2.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_HAS_DEPRECATED_ATTR    -rdynamic CMakeFiles/cmTC_787c2.dir/src.cxx.o  -o cmTC_787c2 
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}

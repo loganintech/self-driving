@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Dev/workspace/devel
+
+Name: lidar_lite
+Description: Description of lidar_lite
+Version: 1.0.0
+Cflags: -I/home/nvidia/Dev/workspace/src/ros-lidar-lite/include
+Libs: -L${prefix}/lib -llidar_lite
+Requires: 

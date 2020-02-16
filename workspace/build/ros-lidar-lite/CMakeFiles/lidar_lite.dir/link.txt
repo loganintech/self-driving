@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -Wextra -Werror  -shared -Wl,-soname,liblidar_lite.so -o /home/nvidia/Dev/workspace/devel/lib/liblidar_lite.so CMakeFiles/lidar_lite.dir/src/driver.cpp.o 

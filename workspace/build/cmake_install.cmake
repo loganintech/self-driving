@@ -131,9 +131,14 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/nvidia/Dev/workspace/build/gtest/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/openslam_gmapping/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/slam_gmapping/slam_gmapping/cmake_install.cmake")
   include("/home/nvidia/Dev/workspace/build/drive_control/cmake_install.cmake")
-  include("/home/nvidia/Dev/workspace/build/read_mavlink/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/ros-lidar-lite/cmake_install.cmake")
   include("/home/nvidia/Dev/workspace/build/rplidar_ros/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/slam_gmapping/gmapping/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/robot_setup_tf/cmake_install.cmake")
+  include("/home/nvidia/Dev/workspace/build/teb_local_planner/cmake_install.cmake")
 
 endif()
 
