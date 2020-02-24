@@ -647,6 +647,9 @@ X11_xf86misc_INCLUDE_PATH:PATH=X11_xf86misc_INCLUDE_PATH-NOTFOUND
 //Path to a file.
 X11_xf86vmode_INCLUDE_PATH:PATH=/usr/include
 
+//The directory containing a CMake configuration file for ZED.
+ZED_DIR:PATH=ZED_DIR-NOTFOUND
+
 //Path to a file.
 _file_name:FILEPATH=/home/nvidia/Dev/workspace/src/slam_gmapping/gmapping/test/basic_localization_laser_different_beamcount.test
 
@@ -840,6 +843,12 @@ message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 
+//The directory containing a CMake configuration file for move_base.
+move_base_DIR:PATH=/opt/ros/melodic/share/move_base/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/melodic/share/move_base_msgs/cmake
+
 //The directory containing a CMake configuration file for nav_core.
 nav_core_DIR:PATH=/opt/ros/melodic/share/nav_core/cmake
 
@@ -848,6 +857,12 @@ nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
+
+//Value Computed by CMake
+not_a_car_2dnav_BINARY_DIR:STATIC=/home/nvidia/Dev/workspace/build/not_a_car_2dnav
+
+//Value Computed by CMake
+not_a_car_2dnav_SOURCE_DIR:STATIC=/home/nvidia/Dev/workspace/src/not_a_car_2dnav
 
 //Value Computed by CMake
 openslam_gmapping_BINARY_DIR:STATIC=/home/nvidia/Dev/workspace/build/openslam_gmapping
@@ -926,6 +941,9 @@ rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
 //Value Computed by CMake
 rplidar_ros_BINARY_DIR:STATIC=/home/nvidia/Dev/workspace/build/rplidar_ros
+
+//The directory containing a CMake configuration file for rplidar_ros.
+rplidar_ros_DIR:PATH=/home/nvidia/Dev/workspace/devel/share/rplidar_ros/cmake
 
 //Value Computed by CMake
 rplidar_ros_SOURCE_DIR:STATIC=/home/nvidia/Dev/workspace/src/rplidar_ros
@@ -1028,6 +1046,18 @@ xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 
 //The directory containing a CMake configuration file for yaml-cpp.
 yaml-cpp_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/yaml-cpp
+
+//Value Computed by CMake
+zed_ros_BINARY_DIR:STATIC=/home/nvidia/Dev/workspace/build/zed-ros-wrapper/zed_ros
+
+//Value Computed by CMake
+zed_ros_SOURCE_DIR:STATIC=/home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_ros
+
+//Value Computed by CMake
+zed_wrapper_BINARY_DIR:STATIC=/home/nvidia/Dev/workspace/build/zed-ros-wrapper/zed_wrapper
+
+//Value Computed by CMake
+zed_wrapper_SOURCE_DIR:STATIC=/home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_wrapper
 
 
 ########################
@@ -1191,7 +1221,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

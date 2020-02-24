@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="rplidar_ros" type="rplidarNode" name="circlelidar" output="screen">
+    </node>
+    
+    <node pkg="zed_wrapped" type="zed.launch" name="zedodom" output="screen">
+    </node>
+</launch>

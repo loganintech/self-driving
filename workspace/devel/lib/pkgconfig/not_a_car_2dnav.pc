@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Dev/workspace/devel
+
+Name: not_a_car_2dnav
+Description: Description of not_a_car_2dnav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

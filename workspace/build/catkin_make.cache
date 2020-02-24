@@ -1,2 +1,2 @@
-drive_control:openslam_gmapping:robot_setup_tf:ros-lidar-lite:rplidar_ros:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:teb_local_planner
+drive_control:not_a_car_2dnav:openslam_gmapping:robot_setup_tf:ros-lidar-lite:rplidar_ros:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:teb_local_planner:zed-ros-wrapper/zed_ros:zed-ros-wrapper/zed_wrapper
 -DCATKIN_DEVEL_PREFIX=/home/nvidia/Dev/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Dev/workspace/install -G Unix Makefiles
