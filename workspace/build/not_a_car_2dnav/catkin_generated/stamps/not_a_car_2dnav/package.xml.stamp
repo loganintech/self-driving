@@ -49,13 +49,13 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>move_base</build_depend>
+  <!-- <build_depend>move_base</build_depend> -->
   <build_depend>zed-ros-wrapper</build_depend>
   <build_depend>rplidar_ros</build_depend>
-  <build_export_depend>move_base</build_export_depend>
+  <!-- <build_export_depend>move_base</build_export_depend> -->
   <build_export_depend>zed-ros-wrapper</build_export_depend>
   <build_export_depend>rplidar_ros</build_export_depend>
-  <exec_depend>move_base</exec_depend>
+  <!-- <exec_depend>move_base</exec_depend> -->
   <exec_depend>zed-ros-wrapper</exec_depend>
   <exec_depend>rplidar_ros</exec_depend>
 
