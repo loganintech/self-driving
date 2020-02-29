@@ -1,2 +1,2 @@
-amcl:drive_control:manual_control:mavros/libmavconn:mavros/mavros:mavros/mavros_extras:mavros/mavros_msgs:mavros/test_mavros:not_a_car_2dnav:openslam_gmapping:robot_setup_tf:ros-lidar-lite:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:zed-ros-wrapper/zed_ros:zed-ros-wrapper/zed_wrapper
+amcl:manual_control:mavros/libmavconn:mavros/mavros:mavros/mavros_extras:mavros/mavros_msgs:mavros/test_mavros:not_a_car_2dnav:openslam_gmapping:pointcloud_to_laserscan:ros-lidar-lite:rplidar_ros:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:tf_base:zed-ros-wrapper/zed_ros:zed-ros-wrapper/zed_wrapper
 -DCATKIN_DEVEL_PREFIX=/home/nvidia/Dev/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Dev/workspace/install -G Unix Makefiles

@@ -2,6 +2,13 @@
     <node pkg="rplidar_ros" type="rplidarNode" name="circlelidar" output="screen">
     </node>
     
-    <node pkg="zed_wrapped" type="zed.launch" name="zedodom" output="screen">
+    <node pkg="zed_wrapper" type="zed_wrapper_node" name="zedodom" output="screen">
     </node>
+
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="zed_pointcloud_to_laserscan" output="screen">
+	<remap from="cloud_in" to="/zed/zed_node/point_cloud/cloud_registered"/>
+        <remap from="scan" to="/zed/scan"/>
+    </node>
+
+    
 </launch>

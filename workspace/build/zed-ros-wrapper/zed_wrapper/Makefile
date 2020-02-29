@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
-.PHONY : zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
-
-# Convenience name for target.
-roslint_zed_wrapper: zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
-
-.PHONY : roslint_zed_wrapper
-
-# fast build rule for target.
-roslint_zed_wrapper/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/build.make zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/build
-.PHONY : roslint_zed_wrapper/fast
-
-# Convenience name for target.
 zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_reset_tracking.dir/rule:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_reset_tracking.dir/rule
 .PHONY : zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_reset_tracking.dir/rule
@@ -648,21 +633,6 @@ zed_wrapper_gennodejs/fast:
 .PHONY : zed_wrapper_gennodejs/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/rule
-.PHONY : zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/build.make zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/rule:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/rule
 .PHONY : zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/rule
@@ -721,6 +691,21 @@ ZEDWrapper: zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/rule
 ZEDWrapper/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/build.make zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/build
 .PHONY : ZEDWrapper/fast
+
+# Convenience name for target.
+zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
+.PHONY : zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
+
+# Convenience name for target.
+roslint_zed_wrapper: zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/rule
+
+.PHONY : roslint_zed_wrapper
+
+# fast build rule for target.
+roslint_zed_wrapper/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/build.make zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/build
+.PHONY : roslint_zed_wrapper/fast
 
 src/nodelet/src/zed_wrapper_nodelet.o: src/nodelet/src/zed_wrapper_nodelet.cpp.o
 
@@ -813,7 +798,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... roslint_zed_wrapper"
 	@echo "... _zed_wrapper_generate_messages_check_deps_reset_tracking"
 	@echo "... _zed_wrapper_generate_messages_check_deps_set_led_status"
 	@echo "... _zed_wrapper_generate_messages_check_deps_start_svo_recording"
@@ -848,11 +832,11 @@ help:
 	@echo "... zed_wrapper_generate_messages_cpp"
 	@echo "... zed_wrapper_genlisp"
 	@echo "... zed_wrapper_gennodejs"
-	@echo "... roslint"
 	@echo "... zed_wrapper_generate_messages_eus"
 	@echo "... zed_wrapper_generate_messages_py"
 	@echo "... _zed_wrapper_generate_messages_check_deps_reset_odometry"
 	@echo "... ZEDWrapper"
+	@echo "... roslint_zed_wrapper"
 	@echo "... src/nodelet/src/zed_wrapper_nodelet.o"
 	@echo "... src/nodelet/src/zed_wrapper_nodelet.i"
 	@echo "... src/nodelet/src/zed_wrapper_nodelet.s"
