@@ -13,6 +13,8 @@ $ rosdep update
 
 $ echo "source /opt/ros/melodic/setup.bash >> ~/.bashrc"
 $ echo "source /home/nvidia/Dev/workspace/devel/setup.bash >> ~/.bashrc"
+
+$ sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
 
 
