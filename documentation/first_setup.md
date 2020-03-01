@@ -27,6 +27,7 @@ git clone https://github.com/mavlink/mavros
 git clone https://github.com/ros/geometry2
 git clone https://github.com/robopeak/rplidar_ros
 git clone https://github.com/ros-perception/slam_gmapping
+git clone https://github.com/ros-perception/openslam_gmapping
 
 # Zed 
 git clone https://github.com/stereolabs/zed-ros-wrapper.git
