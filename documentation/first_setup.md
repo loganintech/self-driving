@@ -18,3 +18,20 @@ $ sudo apt install python-rosinstall python-rosinstall-generator python-wstool b
 ```
 
 
+### Build Deps
+```bash
+sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
+
+cd catkin_workspace/src
+git clone https://github.com/mavlink/mavros
+git clone https://github.com/ros/geometry2
+git clone https://github.com/robopeak/rplidar_ros
+git clone https://github.com/ros-perception/slam_gmapping
+
+# Zed 
+git clone https://github.com/stereolabs/zed-ros-wrapper.git
+wget https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/3.0/ZED_SDK_Tegra_JP43_v3.0.3.run
+sudo chmod +x ZED[tab]
+./ZED[tab]
+git clone https://github.com/stereolabs/zed-ros-wrapper
+```
