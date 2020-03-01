@@ -8,8 +8,9 @@ project(tf_base)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  rospy
+  roscpp
   tf
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -133,6 +134,12 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/tf_base_node.cpp)
+	add_executable(tf_broadcaster src/tf_broadcaster_rplidar.cpp)
+	add_executable(tf_zed src/tf_zed.cpp)
+	#	add_executable(tf_listener src/tf_listener.cpp)
+	target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
+	target_link_libraries(tf_zed ${catkin_LIBRARIES})
+	#	target_link_libraries(tf_listener ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

@@ -1,14 +1,25 @@
 <launch>
-    <node pkg="rplidar_ros" type="rplidarNode" name="circlelidar" output="screen">
+    <node pkg="rplidar_ros" type="rplidarNode" name="circlelidar" output="log">
+	<param name="serial_port" type="string" value="/dev/ttyUSB0" />
+        <param name="serial_baudrate" type="int" value="256000" />
     </node>
-    
-    <node pkg="zed_wrapper" type="zed_wrapper_node" name="zedodom" output="screen">
+
+    <node pkg="zed_wrapper" type="zed_wrapper_node" name="zedodom" output="log">
+        <rosparam file="$(find zed_wrapper)/params/common.yaml" command="load"/>
+        <rosparam file="$(find zed_wrapper)/params/zed.yaml" command="load"/>
+
+        <param name="camera_name" value="zed"/>
+        <param name="camera_model" value="zed"/>
     </node>
 
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="zed_pointcloud_to_laserscan" output="screen">
-	<remap from="cloud_in" to="/zed/zed_node/point_cloud/cloud_registered"/>
+	<remap from="cloud_in" to="/zedodom/point_cloud/cloud_registered"/>
         <remap from="scan" to="/zed/scan"/>
     </node>
 
-    
+
+    <node pkg="gmapping" type="slam_gmapping" name="slam_provider" output="screen"></node>
+
+    <node pkg="tf_base" type="tf_broadcaster" name="rplidar_tf" output="screen"></node>
+    <node pkg="tf_base" type="tf_broadcaster" name="zed_tf" output="screen"></node>
 </launch>
