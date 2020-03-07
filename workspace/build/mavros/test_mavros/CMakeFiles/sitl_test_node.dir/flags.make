@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++14
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"test_mavros\"
 
-CXX_INCLUDES = -I/home/nvidia/Dev/workspace/src/mavros/test_mavros/include -I/usr/include/eigen3 -I/home/nvidia/Dev/workspace/devel/include -I/home/nvidia/Dev/workspace/src/mavros/mavros/include -I/home/nvidia/Dev/workspace/src/mavros/libmavconn/include -I/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include 
+CXX_INCLUDES = -I/home/nvidia/Dev/workspace/src/mavros/test_mavros/include -I/usr/include/eigen3 -I/home/nvidia/Dev/workspace/devel/include -I/home/nvidia/Dev/workspace/src/mavros/mavros/include -I/home/nvidia/Dev/workspace/src/mavros/libmavconn/include -I/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include -I/home/nvidia/Dev/workspace/src/geometry2/tf2_ros/include -I/home/nvidia/Dev/workspace/src/geometry2/tf2/include -I/home/nvidia/Dev/workspace/src/geometry2/tf2_msgs/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include 
 

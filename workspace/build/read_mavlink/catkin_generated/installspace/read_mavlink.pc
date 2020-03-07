@@ -1,8 +1,0 @@
-prefix=/home/nvidia/Dev/workspace/install
-
-Name: read_mavlink
-Description: Description of read_mavlink
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

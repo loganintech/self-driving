@@ -103,10 +103,10 @@ servo_state_publisher_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/libpython2.7.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libtf.so
-/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /home/nvidia/Dev/workspace/devel/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libmessage_filters.so
-/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/liburdf.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/liburdfdom_sensor.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/liburdfdom_model_state.so
@@ -145,10 +145,8 @@ servo_state_publisher_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/librospack.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/libpython2.7.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
-/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libmessage_filters.so
-/home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/nvidia/Dev/workspace/devel/lib/mavros_extras/servo_state_publisher: /opt/ros/melodic/lib/libroscpp.so

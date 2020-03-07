@@ -17,7 +17,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/nvidia/Dev/workspace/devel/include"
   "/home/nvidia/Dev/workspace/src/openslam_gmapping/include"
+  "/home/nvidia/Dev/workspace/src/geometry2/tf2_ros/include"
+  "/home/nvidia/Dev/workspace/src/geometry2/tf2/include"
+  "/home/nvidia/Dev/workspace/src/geometry2/tf2_msgs/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/home/nvidia/Dev/workspace/src/slam_gmapping/gmapping/src"
@@ -28,6 +32,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/nvidia/Dev/workspace/build/openslam_gmapping/CMakeFiles/configfile.dir/DependInfo.cmake"
   "/home/nvidia/Dev/workspace/build/openslam_gmapping/CMakeFiles/gridfastslam.dir/DependInfo.cmake"
+  "/home/nvidia/Dev/workspace/build/geometry2/tf2_ros/CMakeFiles/tf2_ros.dir/DependInfo.cmake"
+  "/home/nvidia/Dev/workspace/build/geometry2/tf2/CMakeFiles/tf2.dir/DependInfo.cmake"
   "/home/nvidia/Dev/workspace/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "/home/nvidia/Dev/workspace/build/openslam_gmapping/CMakeFiles/scanmatcher.dir/DependInfo.cmake"
   "/home/nvidia/Dev/workspace/build/openslam_gmapping/CMakeFiles/utils.dir/DependInfo.cmake"

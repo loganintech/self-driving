@@ -121,13 +121,13 @@ slam_gmapping_replay_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libconfigfile.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libgridfastslam.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libtf.so
-/home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /usr/lib/aarch64-linux-gnu/libboost_signals.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/librosbag_storage.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /opt/ros/melodic/lib/libclass_loader.so
@@ -161,6 +161,7 @@ slam_gmapping_replay_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libsensor_odometry.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libsensor_range.so
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /home/nvidia/Dev/workspace/devel/lib/libsensor_base.so
+/home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
 /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay: slam_gmapping/gmapping/CMakeFiles/slam_gmapping_replay.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/Dev/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/nvidia/Dev/workspace/devel/lib/gmapping/slam_gmapping_replay"
 	cd /home/nvidia/Dev/workspace/build/slam_gmapping/gmapping && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slam_gmapping_replay.dir/link.txt --verbose=$(VERBOSE)

@@ -101,7 +101,6 @@ sitl_test_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libeigen_conversions.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /home/nvidia/Dev/workspace/devel/lib/libmavconn.so
-/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libclass_loader.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/libPocoFoundation.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libdl.so
@@ -110,7 +109,7 @@ sitl_test_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libpython2.7.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
-/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /home/nvidia/Dev/workspace/devel/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libroscpp.so
@@ -122,7 +121,8 @@ sitl_test_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libboost_regex.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/librostime.so
 /home/nvidia/Dev/workspace/devel/lib/test_mavros/sitl_test_node: /opt/ros/melodic/lib/libcpp_common.so

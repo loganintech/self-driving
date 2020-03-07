@@ -137,7 +137,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libZEDWrapper.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libZEDWrapper.so"
-         OLD_RPATH "/usr/local/zed/lib:/opt/ros/melodic/lib:/usr/local/cuda-10.0/lib64:"
+         OLD_RPATH "/usr/local/zed/lib:/home/nvidia/Dev/workspace/devel/lib:/opt/ros/melodic/lib:/usr/local/cuda-10.0/lib64:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libZEDWrapper.so")

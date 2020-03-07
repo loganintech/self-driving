@@ -105,10 +105,10 @@ zed_wrapper_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/liborocos-kdl.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
-/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /home/nvidia/Dev/workspace/devel/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libmessage_filters.so
-/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libboost_signals.so
@@ -132,6 +132,7 @@ zed_wrapper_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libopenblas.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/local/cuda-10.0/lib64/libcudart.so
+/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/Dev/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node"
 	cd /home/nvidia/Dev/workspace/build/zed-ros-wrapper/zed_wrapper && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zed_wrapper_node.dir/link.txt --verbose=$(VERBOSE)

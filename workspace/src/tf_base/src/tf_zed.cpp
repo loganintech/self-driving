@@ -9,13 +9,18 @@ int main(int argc, char** argv){
 
 	//This is the object that will send the transform from the parent node [base_link] 
 	//to the child node [base_laser]
-	tf::TransformBroadcaster b;
+	tf::TransformBroadcaster left;
+	tf::TransformBroadcaster center;
 
 	while (n.ok()){
-		b.sendTransform(
+		left.sendTransform(
 			tf::StampedTransform(
-				tf::Transform(tf::Quaternion(0, 0, 0, 1), tf::Vector3(0, 0, .08)),
-				ros::Time::now(), "base_link", "zed_frame"));
+				tf::Transform(tf::Quaternion(0, 0, -0.707, 1), tf::Vector3(-0.05, 0.15, 0.08)),
+				ros::Time::now(), "base_link", "zed_left_camera_frame"));
+		center.sendTransform(
+			tf::StampedTransform(
+				tf::Transform(tf::Quaternion(0, 0, -0.707, 1), tf::Vector3(0, 0.15, 0.08)),
+				ros::Time::now(), "base_link", "zed_camera_center"));
 		r.sleep();
 	}
 }

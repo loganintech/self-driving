@@ -103,7 +103,7 @@ mavros_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/librosconsole_bridge.so
-/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /home/nvidia/Dev/workspace/devel/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libroscpp.so
@@ -115,7 +115,7 @@ mavros_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libboost_regex.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libtf2.so
+/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/librostime.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libcpp_common.so
@@ -138,7 +138,6 @@ mavros_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libboost_program_options.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/librosconsole_bridge.so
-/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libtf2_ros.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libactionlib.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libroscpp.so
@@ -150,7 +149,6 @@ mavros_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /usr/lib/aarch64-linux-gnu/libboost_regex.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/librostime.so
 /home/nvidia/Dev/workspace/devel/lib/mavros/mavros_node: /opt/ros/melodic/lib/libcpp_common.so

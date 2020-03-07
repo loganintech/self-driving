@@ -15,7 +15,7 @@ int main(int argc, char** argv){
 		b.sendTransform(
 			tf::StampedTransform(
 				tf::Transform(tf::Quaternion(0, 0, 0, 1), tf::Vector3(0, 0, .08)),
-				ros::Time::now(), "base_link", "laser_frame"));
+				ros::Time::now(), "base_link", "circle_laser_frame"));
 		r.sleep();
 	}
 }
