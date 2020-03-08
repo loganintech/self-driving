@@ -26,11 +26,17 @@
 
     <node pkg="gmapping" type="slam_gmapping" name="slam_provider" output="screen">
         <remap from="scan" to="/lidar/scan"/>
-        <param name="map_update_interval" value="0.2"/>
-        <param name="linearUpdate" value="0.0"/>
-        <param name="angularUpdate" value="0.0"/>
+        <param name="map_update_interval" value="0.1"/>
+        <param name="linearUpdate" value="0.1"/>
+        <param name="angularUpdate" value="0.1"/>
+        <param name="particles" value="1"/>
+        <param name="delta" value="0.1" />
     </node>
 
+<!--
     <node pkg="tf_base" type="tf_broadcaster" name="rplidar_tf" output="screen"></node>
-    <node pkg="tf_base" type="tf_zed" name="zed_tf" output="screen"></node>
+    <node pkg="tf_base" type="tf_zed" name="zed_tf" output="screen"></node> -->
+    <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 0 0 -0.707 1 base_link zed_left_camera_frame 10"/>
+    <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 0 0 0 1 base_link circle_laser_frame 10"/>
+    <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 0 0 -0.707 1 base_link zed_camera_center 10"/>
 </launch>

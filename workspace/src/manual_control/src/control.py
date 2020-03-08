@@ -3,13 +3,16 @@ from mavros_msgs.msg import ManualControl
 import tty
 import sys
 import termios
+import threading
+import time
+import queue
 
 dest_node = "/mavros/manual_control/send"
 
 
 def main():
     print("Starting manual control")
-    print("Press WASD to move, anything else to exit")
+    print("Press WASD to move, hold ESC to exit")
 
     pub = rospy.Publisher(dest_node, ManualControl, queue_size = 1) # Queue size one because we always want the most recent data
 
@@ -18,15 +21,17 @@ def main():
 
     frame_id = 0
 
+    queue = start_input_read()
     while not rospy.is_shutdown():
-        ch = read_key()
-        if ch in ['w', 'a', 's', 'd']:
-            ctrl = get_control(ch, frame_id)
-            frame_id += 1
-            pub.publish(ctrl)
-            rospy.loginfo(ctrl)
-        else:
-            exit(1)
+        ch = ''
+        if not queue.empty():
+            ch = queue.get()
+            if ord(ch) == 27: #escape key pressed
+                exit(1)
+        ctrl = get_control(ch, frame_id)
+        frame_id += 1
+        pub.publish(ctrl)
+        #rospy.loginfo(ctrl)
 
         rate.sleep()
 
@@ -42,8 +47,6 @@ def get_control(char, frame_id):
     now = rospy.get_rostime()
     msg.header.stamp.secs = now.secs
     msg.header.stamp.nsecs = now.nsecs
-
-    print(rospy.get_time())
 
     if debugging:
         msg.x = multiplier
@@ -67,12 +70,30 @@ def get_control(char, frame_id):
     msg.z = 0 # No up or down on car
     return msg
 
+def add_input(input_queue):
+    while True:
+        ch = read_key()
+        try:
+            input_queue.put(ch, False, 0.001)
+        except queue.Full:
+            pass
+
+def start_input_read():
+    input_queue = queue.Queue(1)
+    input_thread = threading.Thread(target=add_input, args=(input_queue,))
+    input_thread.daemon = True
+    input_thread.start()
+
+    return input_queue
+
 def read_key():
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
     try:
         tty.setraw(sys.stdin.fileno())
         ch = sys.stdin.read(1)
+    except ValueError:
+        exit(1)
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return ch

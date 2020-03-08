@@ -35,4 +35,8 @@ wget https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/3.0/ZED_SDK_Tegra
 sudo chmod +x ZED[tab]
 ./ZED[tab]
 git clone https://github.com/stereolabs/zed-ros-wrapper
+
+# Python 3 Support
+sudo apt-get install python3-rospkg
 ```
+
