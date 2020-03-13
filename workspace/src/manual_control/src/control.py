@@ -6,9 +6,10 @@ import termios
 import threading
 import time
 import queue
+import select
+from random import random
 
 dest_node = "/mavros/manual_control/send"
-
 
 def main():
     print("Starting manual control")
@@ -21,17 +22,14 @@ def main():
 
     frame_id = 0
 
-    queue = start_input_read()
     while not rospy.is_shutdown():
-        ch = ''
-        if not queue.empty():
-            ch = queue.get()
-            if ord(ch) == 27: #escape key pressed
-                exit(1)
+        ch = read_key()
+        if ord(ch) == 27: # If it's the escape key
+            exit(1)
         ctrl = get_control(ch, frame_id)
         frame_id += 1
         pub.publish(ctrl)
-        #rospy.loginfo(ctrl)
+        rospy.loginfo(ctrl)
 
         rate.sleep()
 
@@ -42,7 +40,7 @@ def get_control(char, frame_id):
 
     multiplier = 0.5
     msg = ManualControl()
-    msg.header.frame_id = f'Manual Control: {frame_id}'
+    msg.header.frame_id = "manual_control_frame"
     msg.header.seq = frame_id
     now = rospy.get_rostime()
     msg.header.stamp.secs = now.secs
@@ -66,25 +64,13 @@ def get_control(char, frame_id):
     if char == 'd':
         msg.y = multiplier * 1
 
-    msg.r = 0 # No roll on car
-    msg.z = 0 # No up or down on car
+    if debugging:
+        msg.r = random() % 1 # No roll on car
+        msg.z = random() % 1 # No up or down on car
+    else:
+        msg.r = 0.0
+        msg.z = 0.0
     return msg
-
-def add_input(input_queue):
-    while True:
-        ch = read_key()
-        try:
-            input_queue.put(ch, False, 0.001)
-        except queue.Full:
-            pass
-
-def start_input_read():
-    input_queue = queue.Queue(1)
-    input_thread = threading.Thread(target=add_input, args=(input_queue,))
-    input_thread.daemon = True
-    input_thread.start()
-
-    return input_queue
 
 def read_key():
     fd = sys.stdin.fileno()
