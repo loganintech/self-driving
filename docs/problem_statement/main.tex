@@ -1,0 +1,55 @@
+\documentclass[journal,draftclsnofoot,onecolumn]{IEEEtran}
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Autonomous RC Car\\Problem Statement}
+
+\author{Logan Saso\\Senior Capstone Project\\Fall 2019}
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+
+This document describes the plan of action for Capstone project 42 - Autonomous RC Car. It will discuss the problem statement, proposed solution, and performance metrics. This project is to investigate new detection methods for autonomous vehicles on a mock scale. The goal is to create an autonomous RC car that is capable of making judgments about the severity of obstacles and either continuing through them or avoiding them. In the case of an RC car, going over small rocks is acceptable whereas hitting large rocks, walls, or moving objects is not. In an ideal situation the car will be able to continue with a self-adjusted route when avoiding obstacles. For moving obstacles, the car could have the option to simply stop and wait until the detected object is no longer an obstacle.
+
+\end{abstract}
+
+
+\section{Problem Description}
+
+Modern self-driving vehicles use an array of sensors to detect imminent threats to the vehicle or pedestrians on motorways or in some cases off-road. Technologies including LIDAR are used to provide the vehicle with an array of information required to make intelligent decisions about new pathing. Fine-grained information could include data about tire wear, weather, visibility, and other factors. For the scope of this project, we're most concerned with Optical Sensors, LIDAR, and possible Ultrasonic Sensors for detecting close, medium, and distant objects. The purpose is not necessarily to provide an end-all be-all technology for self-driving systems, but to provide a system that is easily adaptable to arbitrary environments. Once this platform is created, it can be used to test and fine-tune collision-avoidance techniques in order to come up with a consistent behavior that is safe for riders in the vehicle and predictable to those that may also be on the road. 
+
+This, in turn, facilitates a comparatively inexpensive and less dangerous way to test hazard situations or specifically crafted “worst case” scenarios in which the platform would have to make the most of. The platform could then be tuned for different outcomes given similar scenarios. The situation in which the platform must choose between two different crashes, it could choose a utilitarian approach over potential other solutions. This could, for example, apply the trolley problem to self-driving cars.
+
+\section{Proposed Solution}
+
+The project makes use of a 1/10th scale Traxxas Summit RC truck with remote controller differential locking, high-low transmission, and long-travel suspension. This will support the Nvidia AGX Xavier as the brain of the system providing industry-standard machine learning capabilities with only a 30-watt power draw, ideal for use in a smaller RC system. The AGX will ingest data from multiple LIDAR, Ultrasonic, and Optical sensors to provide real-time data to the Ai core driving the vehicle. This will allow for rapid responses to a variety of unforeseen circumstances like objects in the road, obstacles, or limitations to the vehicle. 
+
+The idea is to train the car to avoid obstacles that it can predict will be in its path given its current trajectory or objects that are heading towards it at a speed slow enough to avoid. In the situations that crashes are unavoidable, the system has to take the steps it can to protect any potential passengers, especially the driver in a single-rider scenario, and provide the least damage to both its own platform and whatever may be crashing into it. The different sensors will be constantly monitoring the world around the platform to create the best possible outcome given a particular path. In addition, the platform must be capable of performing an arbitrary amount of path steps. For example, the car may be programmed to drive 100 meters forward and come back to where it started. To do this, the car must be able to tell where its destination is while still maintaining the ability to change the path given unforeseen obstacles.
+
+Modern car companies take a few different approaches to doing this. Some, like tesla, rely on a combination of LIDAR and Optical Sensors to see the world as a driver might see and make appropriate decisions based on the intended path. The path could very well be set using GPS coordinates or a location on a map. For the RC car, we're not able to rely on map data, so it’s possible we use GPS coordinates or a relative location to the starting point. The platform must have a way to keep track of its location in the event that it moves separate from its wheels. Driving up a dirt road, for example, might prevent the car from realizing it has slipped back down the hill a bit. A combination of GPS and other location-identifying technologies will be used to keep the car on track. 
+
+
+\section{Metrics}
+
+The platform will be judged on a few metrics. First and foremost, safety to the car itself and its passengers is of the utmost importance. This particular project aims to create a fully-functioning autonomous vehicle with software switches for selectively enabling and disabling autonomous driving mode. The car has to be able to navigate from a garage out onto a relatively low-population city street, avoiding obstacles it’d find in the way, and navigating to all of the achievable planned destinations before returning to the garage. 
+
+It has to use a combination of sensors to achieve different ranges and quality of data. Furthermore, it has to learn from its experiences to better navigate around obstacles in the future. If, for example, the car decides it can run over a rock that is slightly larger and it ends up getting stuck, the car should be able to reason that in the future rocks of that size are not able to be traversed and must be avoided. Furthermore, the car should make attempts to unstick itself from a situation in which it cannot move before deciding that it requires outside assistance. Once it does, it should be able to signal the operator that it is unable to continue. 
+
+
+
+
+% that's all folks
+\end{document}
+
+

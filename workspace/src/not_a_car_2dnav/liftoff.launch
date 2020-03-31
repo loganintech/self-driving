@@ -20,7 +20,7 @@
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="zed_pointcloud_to_laserscan" output="screen">
 	<remap from="cloud_in" to="/zedodom/point_cloud/cloud_registered"/>
         <remap from="scan" to="/zed/scan"/>
-        <param name="scan_time" type="double" value="0.0167"/>
+        <param name="scan_time" type="double" value="0.01"/>
     </node>
 
 

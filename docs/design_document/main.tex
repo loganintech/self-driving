@@ -1,0 +1,280 @@
+\documentclass[onecolumn, draftclsnofoot, 10pt, compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{geometry}
+
+\geometry{textheight=9.5in, textwidth=7in}
+
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{xcolor}
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{cyan}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{4.5cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
+
+% 1. Fill in these details
+\def \CapstoneTeamName{Team 42}
+\def \CapstoneTeamNumber{		42}
+\def \GroupMemberOne{			Michael Burton}
+\def \GroupMemberTwo{			Rajat Kulkarni}
+\def \GroupMemberThree{			Logan Saso}
+\def \GroupMemberFour{			Miao Zhou}
+\def \CapstoneProjectName{		Autonomous RC Car}
+%\def \CapstoneSponsorCompany{	}
+\def \CapstoneSponsorPerson{	D. Kevin McGrath}
+
+% 2. Uncomment the appropriate line belofw so that the document type works
+\def \DocType{	%Requirement Document
+				%Requirements Document
+				%Technology Review
+				Design Document
+				%Progress Report
+				}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+\renewcommand{\NameSigPair}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large\today}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            {\large Prepared for}\par
+            \vspace{5pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            SmartRC\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            %\CapstoneTeamName\par 
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                \NameSigPair{\GroupMemberTwo}\par
+                \NameSigPair{\GroupMemberThree}\par
+                \NameSigPair{\GroupMemberFour}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+
+            This document will describe the design and planned implementation of our Autonomous RC Car. It will cover the timeline of the project, remote control technology, car body, hardware for data processing, sensor selection, data ingest, data formatting, data processing, and decision making. This document provides any user with the knowledge to understand what we did and how we did it. 
+
+
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+
+\clearpage
+
+\section{Overview}
+
+\subsection{Scope}
+
+The scope of this project includes designing, implementing, and testing a self-driving car platform on a miniature scale. It should enable different types of self-driving solutions to be enabled or disabled arbitrarily and, if possible within our time constraints, on the fly. The car will be capable of starting at a position, traveling to an arbitrarily selected destination, and returning to the launching point while avoiding obstacles in an arbitrary environment. Additionally, contingency plans should effectively stop the vehicle in the case of an accident or return to the launching point if it determines the destination is unreachable. There should be no budget, as the hardware is already owned by the client. Plus, all of the implementation should be completed by mid-may in time for the Oregon State Engineering Expo.
+
+\subsection{Purpose}
+
+The purpose of this document is to describe implementation of the Autonomous RC car described in the Requirements Document. The Autonomous RC car is designed to explore the possibilities of self-driving cars.
+
+\subsection{Intended Audience}
+
+This document is intended for potential reviewers or implementors of the project design. The document will expect that you understand basic things about machine learning, sensor technology, and general knowledge of self-driving car companies. 
+
+\subsection{Conformance}
+
+The design and execution of the autonomous RC Car will conform to the requirements provided by our client and using the hardware provided. This will use optical, lidar, and ultrasonic sensors to detect walls or other objects in its path and route around it.
+
+\subsection{Timeline}
+
+\begin{center}
+\begin{minipage}[t]{.6\linewidth}
+\color{gray}
+\rule{\linewidth}{1pt}
+\ytl{01/06/2019}{Receive hardware and get car to move}
+\ytl{01/13}{Implement navigation system for car}
+\ytl{01/20}{Implement obstacle detection and rerouting using LiDAR}
+\ytl{01/27}{Implement dynamic obstacle avoidance using ultrasonic sensors}
+\ytl{02/10}{Implement optical object classifier}
+\ytl{02/24}{Begin testing and refining car}
+\ytl{03/02}{Continue testing and refining car until finished}
+\bigskip
+\rule{\linewidth}{1pt}
+\end{minipage}
+\end{center}
+\section{Conceptual Model for Software Design and Development}
+
+We will be using Agile development based on features to model different sections of work. A central repository will house all the code that will be needed to run each of the sections of the car, with pull requests being reviewed by at least one team member, but preference that two review before merging. All of this will take place on GitHub and consist of a high-level scripting language for management of the system and low-level hardware language for management of the sensors and data ingest. 
+
+Each team or person that works on a particular feature will work on it in a separate feature-branch, which will be merged into the master working code if it is approved. Local testing will be applied to code where applicable, but certain things like model testing must be tested with hardware. For example, a change to how the LIDAR accepts and produces data will have to be flashed to the device for testing.
+
+\section{Definitions}
+
+\begin{itemize}
+\item AI - Artificial Intelligence 
+\item Compass Sensor - Gives the orientation and direction, relative to the placement of the sensor.
+\item GPS - Global Positioning System
+\item LiDAR - Emits lasers and measures the time taken for the reflections to bounce back; using the speed of light, it calculates distances relative to the sensors location. 
+\item RAM - Random Access Memory 
+\item Rotation Sensor - Tracks the number of rotations a motor has done
+\item SDK - Software development kit
+\item Ultrasonic sensor -  Uses sound waves to determine how far away something is in front of it
+\item Vision Processor - Processor that accelerates machine vision tasks.
+\end{itemize}
+
+\section{Design Choices}
+
+\subsection{Brain}
+
+\subsubsection{Overview}
+
+The bulk of the work for this project will consist of a machine-learning solution that will react to arbitrary environments. It will take input from all of the different sensors, process it, and make decisions about what to do. For this, it must be capable of processing large amounts of data in a small time frame. Furthermore, since our platform is limited in size, it's important that we can use minimal power for the device and that it can fit on the 1/10th scale Traxxas body that we will be using for the platform. 
+
+\subsubsection{Concerns}
+The car must have a system strong enough to allow for the use of AI and machine learning. 
+
+\subsubsection{AGX Xavier}
+For the project we will be using an NVIDIA AGX Xavier, with a 512 core Volta GPU, an 8 core ARM v8.2 64-bit CPU with 8MB of L2 and 4MB of L3 Cache, along with 32GB of eMMC 5.1 flash storage and 16GB of LPDDR4x RAM. This device will be the center of focus for the platform and do all of the data ingest, formatting, processing, and decision making. It has a 7-way VLIW Vision Processor that will be taken advantage of for object classification. We will then use it to identify objects that must be avoided and objects that don't have to be avoided. Certain things must be considered like the size of the object, but in certain cases must take other aspects of the object into account. For example, it is never acceptable to run into someone or their legs, but it would be acceptable to try and climb a relatively small rock.
+
+As for the interfaces, it has PCIe X16 lanes, USB-C, a Camera Connector, space for an NVMe M.2 drive, HD audio header, eSATA, and HDMI. It is very likely that we will have an additional connector bridge for many of the sensors, since the hardware does not include enough connection points for all of the sensors we will be using. In addition, we will be mounting all of the hardware to a baseplate on the car with a battery that will support the self-driving functionality. When the AI hardware starts running out of power, it will route itself back to the start and fallback on manual control if necessary.
+
+\subsubsection{Design Rationale}
+
+The Xavier was chosen for its out-of-the-box machine learning capabilities at a low enough power draw that it could be feasible in an RC car. Furthermore, we already have the device on-hand so it would be unreasonable to use another platform when this is available to us. Furthermore, it has the highest number of connectors for sensors and the best machine learning capabilities on the consumer market.
+
+\subsection{Car Body}
+
+\subsubsection{Overview}
+The car body will carry a variety of components, such as the ultrasonic, LiDAR, and optical sensors, as well as the Nvidia computer. It takes input that will be delivered from the Nvidia chip in order to control it.
+
+\subsubsection{Concerns}
+The car must be able to have all the additional hardware components mounted onto it.
+
+\subsubsection{Traxxas Summit}
+We will use the Traxxas Summit, the 1/10 scale 4 wheel drive extreme terrain monster truck, which comes with remote differential locking and a dual-speed transmissions, TQiTM 2.4GHz 4-channel radio system, Waterproof Electronics and 10-LED Lighting System. Its role is to be able to move given the radio frequencies output by the brain, as well as hold all the various electronics. This model has a higher amount of torque, which will allow for the heavy electronics to be mounted to the car without slowing it down. This model is also relatively slow and has the option to have it in a lower gear to limit the speed even more. This will make it so we do not have to make decisions nearly as fast as well as limiting the amount of damage it can cause to itself and the environment it is operating in. The car is big enough that it should allow us to be able to maneuver over some obstacles as well as having enough room to hold the brain and the large amount of sensors.
+
+
+\subsubsection{Design Rational}
+Traxxas Summit was chosen because it meets our basic requirements, it has enough space to install all electronics. The large-capacity waterproof battery provides the necessary power for the components installed. The limited speed of the car will help us to avoid damaging the car and it’s components. The car and the sensors we will be using are very expensive, so limiting the risk of damage is vital.
+
+\subsection{Computer Vision}
+
+\subsubsection{Overview}
+
+Computer vision will be a primary aspect of the machine learning technologies used in this project. For the most part, the system will consist of optical image recognition for objects that we don't want to hit, it will then correlate the vision with other sensors like the LIDAR or Ultrasonic sensors to determine distance and depth from the obstacle in order to best decide how to avoid it.
+
+\subsubsection{Concerns}
+
+The car must be able to determine if an object is small enough to be driven over. If it's too large the car must go around it. However, certain things smaller then the baseline will be unacceptable to hit (i.e. a person or animal). Furthermore, it must learn to avoid certain objects in the future without needing distance. It's not rational to route into a wall if we know a wall will never be driven through.
+
+
+\subsubsection{Software tools}
+We will be using VisionWorks as our primary computer vision processor, as it is included in the Jetson AGX toolkit and provides libraries for Advanced Driver Assistance Systems, Video Analytics, and Augmented Reality. The VisionWorks package is quite large but comes pre-installed on the Xavier. Primarily VisionWorks deals with object detection using optical image recognition as many platforms are designed to do. VisionWorks takes advantage of other platforms we will be using like OpenCV. Our pipeline will consist of OpenCV, NPP, and OpenVX. 
+
+NPP stands for the Nvidia Performance Primitives library which provides ”GPU-accelerated image, video, and signal processing functions that can perform up to 30x faster than CPU-only implementations.” While that does sound great, most implementations of these functions are not CPU-only, so the speed relative to other implementations is not 30x its competitors. Regardless, it is useful to use such a library in the line of frameworks because of its strong integration with Nvidia technology and will be very useful in the pipeline described in the VisionWorks documentation.
+A third-party alternative to VisionWorks is OpenCV, an open-source computer vision library designed to be location-agnostic and provide optimized algorithms for the most common machine learning tasks \cite{opencv}. In addition to its ubiquity, OpenCV is a good choice for us because it supports the CUDA runtime, Nvidia’s proprietary technology for parallel processing that is also supported by VisionWorks. In addition, OpenCV advertises itself as being able to ”detect and recognize faces, identify objects, . . . track moving objects, recognize scenery” and many more. The bulk of processing the AGX will have to do directly related to object recognition and response, so having a library available to us with these capabilities is essential. It will be integrated into the learning pipeline that will power the decisions of the project. 
+
+OpenVX is a closed-source royalty-free implementation of a portable computer vision software marketed as enabling performant, power-optimized computer vision processing such as body and gesture tracking, smart video surveillance, and most importantly advanced driver assistance systems \cite{openvx}. While there is no particular requirement for a graphics card using OpenVX, it’s encouraged for real-time processing. Conformant OpenVX drivers are available for Nvidia hardware found in the AGX Xavier. It will be the last step in the pipeline described by VisionWorks to detect and react to objects in the path of our car.
+
+\subsubsection{Design Rationale}
+The strengths of Visionworks is that it comes pre-packaged in the Jetson AGx. In addition, it is specifically engineered for applications such as autonomous driving. One of the biggest advantages of using API's like OpenCV is that, when used in conjunction with Visionworks, it can be very helpful because it allows access to many "open-source" CV algorithms. Next, the Nvidia Performance Primitives library's strength is primarily that it is very closely integrated to and are highly optimized for Nvidia GPU's. \cite{nvidia}
+ 
+ 
+\subsection{Navigation}
+
+\subsubsection{Overview}
+ This system will focus on providing accurate information for where the car is located, and where it needs to go to get to its destination.
+
+\subsubsection{Concerns}
+The navigation system must be able to get the car from point A to a user-determined point B. It must be able to readjust the car’s path after avoiding obstacles.
+
+\subsubsection{GPS with Compass and Rotation Sensor}
+For this system, we will be relying on a GPS chip in the car which should give us accurate location data with a margin of error of about 3 meters. We will also use a compass sensor coupled with rotational sensors in order to allow us to provide a more accurate car location. 
+
+Our system will use GPS to give the cars starting location, we will then use these coordinates, and the final destination coordinates to calculate how far in what directions the car needs to go. The compass will provide us with proper cardinal directions allowing us to ensure we are going in the proper direction. We will use the rotation sensor to calculate how much we have moved. We will couple this information with the compass sensor to calculate how far we have moved in each direction. In an ideal world, the car would be able to make it from point A to point B in a straight line. However, the car will not always be able to make the path in a straight line. Because of this, our system will account for every non-planned movement made by adding those movements to our original optimal calculation. When the car believes it has arrived at the destination in accordance with the calculations made before and during the drive, and the distances traveled as reported by the compass and rotation sensors, the car will check in with the GPS to see if it thinks it has arrived at the given destination. If the GPS shows the car is not in the correct location, the system will calculate a path from the current location, to the given destination. This process will repeat until both systems believe the car has made it to the proper location. The path taken will be saved in memory, and if the return option was selected, the car will then try to take the same path it took to get to the destination in order to return.
+
+
+\subsubsection{Design Rationale}
+The GPS was chosen to satisfy the component of the project of having the car move from point A to point B. Utilizing GPS is the most effective and efficient way to do this, rather than using pre-saved maps that may or may not be frequently updated. Moreover, the GPS unit will be especially helpful in this case as it can accurately measure the distance deviated from the optimal straight-line path due to obstructions shown by the sensors. [4]
+
+Using just the GPS system would result in an accuracy of only three meters. Using just the rotation and compass sensors would allow for small errors to compound overtime with no way of keeping its accuracy in check. This is why the optimal solution is using all three sensors in a combined system to help mitigate small location errors. This will keep the car on course. 
+
+
+\subsection{LiDAR and Ultrasonic Obstacle Avoidance}
+
+\subsubsection{Overview}
+ Using a combination of sensors, the car will be able to identify obstacles and properly avoid them in real-time.
+
+\subsubsection{Concerns}
+The car must anticipate and avoid both static and dynamic objects and safely make it to its destination without any collisions. This includes obstacles moving head-on towards the car.
+
+\subsubsection{LiDAR and Ultrasonic Sensors}
+In order to implement obstacle avoidance, our car will be using data taken in from two types of sensors. First, there will be a 360-degree LiDAR sensor mounted to the top of the car. The LiDAR sensor we will be using is the SLAMTEC RPLIDAR A3. This is a 360-degree LiDAR sensor that will allow us to have accurate location data of objects within a 25 meter radius of the sensor. The LiDAR sensor we are using comes with a provided SDK in C++ that allows us to control the sensor’s movements and update rate as well as allowing us to read in the data. In addition, we will use four ultrasonic sensors positioned on the front, back, right, and left sides of the car. 
+
+Our system will utilize the sensor data from both types of sensors for our obstacle avoidance system. The LiDAR sensor provides what is essentially a two-dimensional map of objects in the surrounding area. We will use the SDK to control the sensor and to read in the data. We will use the LiDAR sensor to tell the system when a static object is in the way and where to move to in order to avoid the object while staying on track toward the destination. Since the LiDAR sensor provides data for a 360 radius we will be able to notice an object that is in the way of our desired path while also locating an opening. With this information, the car can navigate to the best path that keeps the car on the proper trajectory. The ultrasonic sensors provide a distance from the location of the sensor in the direction it is looking. The car will also need to be able to avoid objects that are moving towards it. We will use the ultrasonic sensors to focus on avoiding moving objects. We will do this by reading in the ultrasonic sensor distance data for each sensor. The algorithm will determine if there is a continuing decrease in distance between the sensed object and the car. Once this decreasing distance is read below one meter, the car will attempt to avoid the object by either moving in the opposite direction or slowing down/speeding up. This will depend on what available space the car has to move and where the approaching object is coming from. Since the car only has the capability to move forward, objects that the left, right, and back sensor detect should never have objects that are decreasing in distance at any rate. The algorithm will ignore distance readings that have dramatic drops. An example of this behavior would be if the car is driving down a super-wide room with no wall close on its right side. Then the car navigates to a hallway, once the car drives into the hallway, the distance reading from the sensor should instantly decrease by a dramatic amount. We can determine that the wall is likely not to move into the car from the right side, since it is not moving towards the car, but rather it just shortened the distance instantaneously. If the car is moving diagonally towards the wall, this will also trigger the system, even though the wall is a static object. This is fine because once the car has gotten close enough to the wall at this constant rate, the car will simply try to adjust its movement angle until the object is no longer decreasing in distance. As far as the front ultrasonic sensor is concerned, it should always be sensing a decrease of distance at the rate the car is moving. To discern if an object is moving towards the car we read the rate at which the distance is decreasing, and subtract that from the speed of the car. If the rate at which the distance is decreasing is greater than the speed of the car, we know that there must be some object moving towards the car head-on. We will then attempt to avoid the object once it is within one meter of the car by telling the car to swerve in either the right or left direction, depending on if the left and right ultrasonic sensors detect an opening.
+
+
+\subsubsection{Design Rationale}
+The Ultrasonic and LiDAR sensors were chosen because they both meet the basic sensing needs. The LiDAR's biggest advantage is that it can generate a complete 360 degree 2D map of the car's surroundings. it is the best choice for identifying the overall condition of the desired path and what stationary objects are in the way. The four ultrasonic sensors were chosen due to the fact that they have a longer optimal range of 40 meters compared to 25 meters for the LiDAR. That it will provide another set of data for us to use to improve the accuracy of our system.
+
+
+
+\subsection{Optical Object Classification}
+\subsubsection{Overview}
+In order for us to know if an object will be able to be driven over, or if we will have to try and find a new path, we will need to be able to determine if the object would either, A. be hurt by the car running over it, or B. hurt the car by being run into. To this we will rely on a forward facing optical sensor and machine learning to be able to classify objects and determine their size. For example, we should be able to easily drive over a two inch thick piece of plywood. we wouldn't be able to drive over an 8ft tall wall and we shouldn't drive over a person's foot.
+
+\subsubsection{Concerns}
+The car must correctly be able to classify different objects, determine their size, and then react accordingly. 
+
+\subsubsection{Optical Sensor Implementation}
+We will use a forward facing optical sensor to determine the object type and the object size. We will do this by utilizing the previously mentioned built in tools such as, VisionWorks, OpenCV, NPP, and OpenVX to classify the objects seen by the sensor. We will also be able to calculate the size of an object by using the field of view of the sensor and how much space the object is taking up in the image. Once the object is classified and the size is calculated, we will be able to determine whether or not the object needs to be avoided or can be driven over. If the object can be driven over the car will do so. However, if the object is not able to be driven over, the car will attempt to move out of the way of the object. Objects that the car should not be able to drive over would be objects that are taller than four inches off the ground or objects that could be harmed, such as living things. 
+\subsubsection{Design Rationale}
+We are using the optical sensor as it will provide us information that other sensors simply can not. The optical sensor will allow us to identify objects which will allow us to know if we would be causing damage by going over it. It will also allow us to calculate the height of an object which will allow us to determine if we will be able to go over said object. This allows our system to make fully formed decisions about detected obstacles. 
+
+
+\subsection{Car Testing}
+
+\subsubsection{Overview}
+
+The car will be tested according to modern self-driving standards. It should be capable of navigating to a position and back without the need for radio interference. Furthermore, if it drops radio signal it should be capable of navigating back to its original position without human interference. It's expected that when the car reaches a failure state, like being upside down, or unable to move, that it will stop attempting to move in order to reduce damage to itself and its passengers.
+
+\subsubsection{Concerns}
+The car must have a set of tests to ensure that the system is working accordance with the end goal.
+
+\subsubsection{Planned Implementation}
+
+Each sensor will be tested individually, with the system being tested as a whole. The optical sensor will be tested to see if it can accurately identify objects to see if it can relay the information needed to the brain. The LiDAR sensor will be tested to see if the car can react to information from it including the rough location of objects around it. The ultrasonic sensors will be tested to see if the car can make long-distance judgements on general direction based on longer-distance objects that might be problematic (like walls, or other things). Unit testing for individual pieces of code will also verify that individual components are not changed. 
+
+\subsubsection{Design Rationale}
+
+These testing methods will ensure that our software is safe to use and implemented in such a way that the car will avoid all obstacles and as much damage to itself as can be saved. Its goal will be to reduce the harm to its passengers and those around it while navigating through arbitrarily complicated environments. 
+
+\section{Conclusion}
+
+Overall, the design of the car is geared towards reducing blind spots for the different sensors to ensure that the car has the best possible chances of being harm-free in its operation. The sensors are position to minimize the lack of data and selected based on maximizing the chance of good choices at close range, and acceptable choices at a longer range. The AGX Xavier was chosen to maximize the learning potential of the brain and its capabilities. With regards to movement and navigation, the LiDAR and ultrasonic sensors will work in conjunction with each other to implement obstacle avoidance; the uni-directional and multi-directional LiDAR sensors will generate a 2D map to track static objects, while the four ultrasonic sensors will gather data about dynamic objects. To ensure that the car can get from user-determined points A to B, a GPS unit will be used; it will calculate the optimal path (which is always a straight line) then do calculations that cause the car to deviate from the path on the fly.
+
+
+\section{Bibliography}
+
+\printbibliography[]
+\noindent[4]\indent Zein, Yassine, et al. “GPS Tracking System for Autonomous Vehicles.” Alexandria Engineering Journal, Elsevier, 13 Nov. 2018, https://www.sciencedirect.com/science/article/pii/S1110016818301091.
+\end{document}
