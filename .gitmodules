@@ -4,3 +4,6 @@
 [submodule "workspace/src/not_a_car_2dnav/pointcloud_to_laserscan"]
 	path = workspace/src/not_a_car_2dnav/pointcloud_to_laserscan
 	url = https://github.com/ros-perception/pointcloud_to_laserscan
+[submodule "workspace/src/navigation"]
+	path = workspace/src/navigation
+	url = https://github.com/ros-planning/navigation

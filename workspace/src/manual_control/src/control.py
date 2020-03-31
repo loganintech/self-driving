@@ -1,5 +1,5 @@
 import rospy
-from mavros_msgs.msg import ManualControl
+from mavros_msgs.msg import OverrideRCIn
 import tty
 import sys
 import termios
@@ -9,13 +9,13 @@ import queue
 import select
 from random import random
 
-dest_node = "/mavros/manual_control/send"
+dest_node = "/mavros/rc/override"
 
 def main():
     print("Starting manual control")
     print("Press WASD to move, hold ESC to exit")
 
-    pub = rospy.Publisher(dest_node, ManualControl, queue_size = 1) # Queue size one because we always want the most recent data
+    pub = rospy.Publisher(dest_node, OverrideRCIn, queue_size = 1) # Queue size one because we always want the most recent data
 
     rospy.init_node('manual_control_keyboard')
     rate = rospy.Rate(10) # 10 hz
@@ -38,38 +38,28 @@ def get_control(char, frame_id):
 
     debugging = False
 
-    multiplier = 0.5
-    msg = ManualControl()
-    msg.header.frame_id = "manual_control_frame"
-    msg.header.seq = frame_id
-    now = rospy.get_rostime()
-    msg.header.stamp.secs = now.secs
-    msg.header.stamp.nsecs = now.nsecs
+    msg = OverrideRCIn()
+#    msg.header.frame_id = "manual_control_frame"
+#    msg.header.seq = frame_id
+    #now = rospy.get_rostime()
+#    msg.header.stamp.secs = now.secs
+#    msg.header.stamp.nsecs = now.nsecs
+    #msg.rssi = 0
 
-    if debugging:
-        msg.x = multiplier
-        msg.y = multiplier
-        msg.z = multiplier
-        msg.r = multiplier
+    msg.channels = [1500, 1500, 1100, 1500, 1100, 1100, 1900, 1900]
 
     if char == 'w':
-        msg.x = multiplier * 1
+        msg.channels[2] = 1200
 
     if char == 's':
-        msg.x = multiplier * -1
+        msg.channels[2] = 1200
 
     if char == 'a':
-        msg.y = multiplier * -1
+        msg.channels[3] = 1100
 
     if char == 'd':
-        msg.y = multiplier * 1
+        msg.channels[3] = 1900
 
-    if debugging:
-        msg.r = random() % 1 # No roll on car
-        msg.z = random() % 1 # No up or down on car
-    else:
-        msg.r = 0.0
-        msg.z = 0.0
     return msg
 
 def read_key():
