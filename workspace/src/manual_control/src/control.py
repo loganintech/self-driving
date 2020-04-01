@@ -49,16 +49,16 @@ def get_control(char, frame_id):
     msg.channels = [1500, 1500, 1100, 1500, 1100, 1100, 1900, 1900]
 
     if char == 'w':
-        msg.channels[2] = 1200
+        msg.channels[1] = 1525
 
     if char == 's':
-        msg.channels[2] = 1200
+        msg.channels[1] = 1475
 
     if char == 'a':
-        msg.channels[3] = 1100
+        msg.channels[0] = 1100
 
     if char == 'd':
-        msg.channels[3] = 1900
+        msg.channels[0] = 1900
 
     return msg
 
