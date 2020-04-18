@@ -95,7 +95,6 @@ tf2_ros_static_transform_publisher_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /usr/lib/aarch64-linux-gnu/libboost_signals.so
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /opt/ros/melodic/lib/librosconsole.so
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/tf2_ros/static_transform_publisher: /opt/ros/melodic/lib/librosconsole_backend_interface.so

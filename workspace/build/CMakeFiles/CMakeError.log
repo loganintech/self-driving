@@ -54,3 +54,24 @@ Makefile:126: recipe for target 'cmTC_30011/fast' failed
 make: *** [cmTC_30011/fast] Error 2
 
 
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b865e/fast"
+make[1]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b865e.dir/build.make CMakeFiles/cmTC_b865e.dir/build
+make[2]: Entering directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b865e.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_b865e.dir/CheckIncludeFile.cxx.o -c /home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_b865e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b865e.dir/CheckIncludeFile.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_b865e.dir/CheckIncludeFile.cxx.o] Error 1
+make[2]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b865e/fast' failed
+make[1]: *** [cmTC_b865e/fast] Error 2
+make[1]: Leaving directory '/home/nvidia/Dev/workspace/build/CMakeFiles/CMakeTmp'
+
+

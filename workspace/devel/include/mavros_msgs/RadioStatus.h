@@ -107,6 +107,29 @@ ros::message_operations::Printer< ::mavros_msgs::RadioStatus_<ContainerAllocator
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::RadioStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::RadioStatus_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.rssi == rhs.rssi &&
+    lhs.remrssi == rhs.remrssi &&
+    lhs.txbuf == rhs.txbuf &&
+    lhs.noise == rhs.noise &&
+    lhs.remnoise == rhs.remnoise &&
+    lhs.rxerrors == rhs.rxerrors &&
+    lhs.fixed == rhs.fixed &&
+    lhs.rssi_dbm == rhs.rssi_dbm &&
+    lhs.remrssi_dbm == rhs.remrssi_dbm;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::RadioStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::RadioStatus_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -114,12 +137,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

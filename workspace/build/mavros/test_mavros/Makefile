@@ -101,17 +101,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -134,6 +123,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,36 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
-
-# Convenience name for target.
-mavros_sitl_test: mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
-
-.PHONY : mavros_sitl_test
-
-# fast build rule for target.
-mavros_sitl_test/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/build.make mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/build
-.PHONY : mavros_sitl_test/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_py.dir/rule:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
 .PHONY : mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
@@ -211,36 +181,6 @@ control_toolbox_generate_messages_py: mavros/test_mavros/CMakeFiles/control_tool
 control_toolbox_generate_messages_py/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_py.dir/build.make mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_py.dir/build
 .PHONY : control_toolbox_generate_messages_py/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
-
-# Convenience name for target.
-sitl_test_node: mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
-
-.PHONY : sitl_test_node
-
-# fast build rule for target.
-sitl_test_node/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/sitl_test_node.dir/build.make mavros/test_mavros/CMakeFiles/sitl_test_node.dir/build
-.PHONY : sitl_test_node/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-control_toolbox_generate_messages_eus: mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
-
-.PHONY : control_toolbox_generate_messages_eus
-
-# fast build rule for target.
-control_toolbox_generate_messages_eus/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/build.make mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/build
-.PHONY : control_toolbox_generate_messages_eus/fast
 
 # Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule:
@@ -288,19 +228,49 @@ control_toolbox_generate_messages_lisp/fast:
 .PHONY : control_toolbox_generate_messages_lisp/fast
 
 # Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+.PHONY : mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+control_toolbox_generate_messages_eus: mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
+.PHONY : control_toolbox_generate_messages_eus
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+control_toolbox_generate_messages_eus/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/build.make mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_eus.dir/build
+.PHONY : control_toolbox_generate_messages_eus/fast
+
+# Convenience name for target.
+mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
+.PHONY : mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
+
+# Convenience name for target.
+sitl_test_node: mavros/test_mavros/CMakeFiles/sitl_test_node.dir/rule
+
+.PHONY : sitl_test_node
+
+# fast build rule for target.
+sitl_test_node/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/sitl_test_node.dir/build.make mavros/test_mavros/CMakeFiles/sitl_test_node.dir/build
+.PHONY : sitl_test_node/fast
+
+# Convenience name for target.
+mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+.PHONY : mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_cpp: mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+
+.PHONY : control_toolbox_generate_messages_cpp
+
+# fast build rule for target.
+control_toolbox_generate_messages_cpp/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build.make mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build
+.PHONY : control_toolbox_generate_messages_cpp/fast
 
 # Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
@@ -316,21 +286,6 @@ control_msgs_generate_messages_cpp: mavros/test_mavros/CMakeFiles/control_msgs_g
 control_msgs_generate_messages_cpp/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
 .PHONY : control_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_eus.dir/rule:
@@ -363,21 +318,6 @@ control_msgs_generate_messages_lisp/fast:
 .PHONY : control_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
 .PHONY : mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
@@ -391,36 +331,6 @@ control_msgs_generate_messages_nodejs: mavros/test_mavros/CMakeFiles/control_msg
 control_msgs_generate_messages_nodejs/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
 .PHONY : control_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_toolbox_generate_messages_cpp: mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-
-.PHONY : control_toolbox_generate_messages_cpp
-
-# fast build rule for target.
-control_toolbox_generate_messages_cpp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build.make mavros/test_mavros/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build
-.PHONY : control_toolbox_generate_messages_cpp/fast
-
-# Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 mavros/test_mavros/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
@@ -438,19 +348,19 @@ control_msgs_generate_messages_py/fast:
 .PHONY : control_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
+.PHONY : mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_py: mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+mavros_sitl_test: mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_py
+.PHONY : mavros_sitl_test
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make mavros/test_mavros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
+mavros_sitl_test/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/build.make mavros/test_mavros/CMakeFiles/mavros_sitl_test.dir/build
+.PHONY : mavros_sitl_test/fast
 
 sitl_test/lib/pid_controller.o: sitl_test/lib/pid_controller.cpp.o
 
@@ -542,29 +452,23 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... mavros_sitl_test"
-	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... control_toolbox_generate_messages_py"
-	@echo "... sitl_test_node"
-	@echo "... control_toolbox_generate_messages_eus"
+	@echo "... rebuild_cache"
 	@echo "... control_toolbox_generate_messages_nodejs"
 	@echo "... control_toolbox_gencfg"
 	@echo "... control_toolbox_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... control_toolbox_generate_messages_eus"
+	@echo "... sitl_test_node"
+	@echo "... control_toolbox_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... control_msgs_generate_messages_eus"
 	@echo "... control_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... edit_cache"
 	@echo "... control_msgs_generate_messages_nodejs"
-	@echo "... control_toolbox_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... control_msgs_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... mavros_sitl_test"
+	@echo "... test"
 	@echo "... sitl_test/lib/pid_controller.o"
 	@echo "... sitl_test/lib/pid_controller.i"
 	@echo "... sitl_test/lib/pid_controller.s"

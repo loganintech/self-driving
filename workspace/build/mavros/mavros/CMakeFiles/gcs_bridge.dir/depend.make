@@ -259,7 +259,6 @@ mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/i
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/gcs_bridge.dir/src/gcs_bridge.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp

@@ -36,16 +36,17 @@
 <!--
     <node pkg="tf_base" type="tf_broadcaster" name="rplidar_tf" output="screen"></node>
     <node pkg="tf_base" type="tf_zed" name="zed_tf" output="screen"></node> -->
-    <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 0 0 -0.707 1 base_link zed_left_camera_frame 10"/>
-    <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 0 0 0 1 base_link circle_laser_frame 10"/>
-    <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 0 0 -0.707 1 base_link zed_camera_center 10"/>
 
+    <!-- Let's use "x y z yaw pitch roll" instead of the quaternion solution -->
+    <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 3.14 0 0 base_link zed_left_camera_frame 10"/>
+    <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 0 0 0 base_link circle_laser_frame 10"/>
+    <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 3.14 0 0 base_link zed_camera_center 10"/>
+
+<!--
     <include file="$(find mavros)/launch/px4.launch">
     </include>
+-->
+   <!-- <include file="$(find amcl)/examples/amcl_params.launch">
+    </include>-->
 
-    <include file="$(find amcl)/examples/amcl_params.launch">
-    </include>
-
-    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    </node>
 </launch>

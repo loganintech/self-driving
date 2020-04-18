@@ -850,8 +850,6 @@ stdint.h
 
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
 
-/opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
-
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
@@ -1263,8 +1261,6 @@ sstream
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_debug_float_array.hpp
 ./mavlink_msg_orbit_execution_status.hpp
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_orbit_execution_status.hpp
-./mavlink_msg_statustext_long.hpp
-/opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 ./mavlink_msg_smart_battery_info.hpp
 /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 ./mavlink_msg_smart_battery_status.hpp

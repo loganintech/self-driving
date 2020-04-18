@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/nvidia/Dev/workspace/build
 include geometry2/tf2_sensor_msgs/CMakeFiles/run_tests_tf2_sensor_msgs_rostest_test_test.launch.dir/progress.make
 
 geometry2/tf2_sensor_msgs/CMakeFiles/run_tests_tf2_sensor_msgs_rostest_test_test.launch:
-	cd /home/nvidia/Dev/workspace/build/geometry2/tf2_sensor_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/nvidia/Dev/workspace/build/test_results/tf2_sensor_msgs/rostest-test_test.xml "/opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs --package=tf2_sensor_msgs --results-filename test_test.xml --results-base-dir \"/home/nvidia/Dev/workspace/build/test_results\" /home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs/test/test.launch "
+	cd /home/nvidia/Dev/workspace/build/geometry2/tf2_sensor_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/nvidia/Dev/workspace/build/test_results/tf2_sensor_msgs/rostest-test_test.xml "/usr/bin/python2 /opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs --package=tf2_sensor_msgs --results-filename test_test.xml --results-base-dir \"/home/nvidia/Dev/workspace/build/test_results\" /home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs/test/test.launch "
 
 run_tests_tf2_sensor_msgs_rostest_test_test.launch: geometry2/tf2_sensor_msgs/CMakeFiles/run_tests_tf2_sensor_msgs_rostest_test_test.launch
 run_tests_tf2_sensor_msgs_rostest_test_test.launch: geometry2/tf2_sensor_msgs/CMakeFiles/run_tests_tf2_sensor_msgs_rostest_test_test.launch.dir/build.make

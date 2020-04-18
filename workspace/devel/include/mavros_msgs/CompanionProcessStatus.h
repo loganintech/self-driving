@@ -49,6 +49,41 @@ struct CompanionProcessStatus_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(MAV_STATE_UNINIT)
+  #undef MAV_STATE_UNINIT
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_BOOT)
+  #undef MAV_STATE_BOOT
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_CALIBRATING)
+  #undef MAV_STATE_CALIBRATING
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_STANDBY)
+  #undef MAV_STATE_STANDBY
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_ACTIVE)
+  #undef MAV_STATE_ACTIVE
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_CRITICAL)
+  #undef MAV_STATE_CRITICAL
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_EMERGENCY)
+  #undef MAV_STATE_EMERGENCY
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_POWEROFF)
+  #undef MAV_STATE_POWEROFF
+#endif
+#if defined(_WIN32) && defined(MAV_STATE_FLIGHT_TERMINATION)
+  #undef MAV_STATE_FLIGHT_TERMINATION
+#endif
+#if defined(_WIN32) && defined(MAV_COMP_ID_OBSTACLE_AVOIDANCE)
+  #undef MAV_COMP_ID_OBSTACLE_AVOIDANCE
+#endif
+#if defined(_WIN32) && defined(MAV_COMP_ID_VISUAL_INERTIAL_ODOMETRY)
+  #undef MAV_COMP_ID_VISUAL_INERTIAL_ODOMETRY
+#endif
+
   enum {
     MAV_STATE_UNINIT = 0u,
     MAV_STATE_BOOT = 1u,
@@ -107,6 +142,22 @@ ros::message_operations::Printer< ::mavros_msgs::CompanionProcessStatus_<Contain
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::CompanionProcessStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::CompanionProcessStatus_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.state == rhs.state &&
+    lhs.component == rhs.component;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::CompanionProcessStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::CompanionProcessStatus_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -114,12 +165,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

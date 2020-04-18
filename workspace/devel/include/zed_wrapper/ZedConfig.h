@@ -69,7 +69,7 @@ namespace zed_wrapper
         field(a_f)
       {}
 
-      T (ZedConfig::* field);
+      T ZedConfig::* field;
 
       virtual void clamp(ZedConfig &config, const ZedConfig &max, const ZedConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace zed_wrapper
         }
       }
 
-      T (PT::* field);
+      T PT::* field;
       std::vector<ZedConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

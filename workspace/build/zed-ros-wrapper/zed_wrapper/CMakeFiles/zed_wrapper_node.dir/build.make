@@ -111,7 +111,6 @@ zed_wrapper_node_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /home/nvidia/Dev/workspace/devel/lib/libtf2.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libboost_signals.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/librosconsole.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/librosconsole_backend_interface.so

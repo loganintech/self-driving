@@ -69,6 +69,23 @@ struct DebugValue_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(TYPE_DEBUG)
+  #undef TYPE_DEBUG
+#endif
+#if defined(_WIN32) && defined(TYPE_DEBUG_VECT)
+  #undef TYPE_DEBUG_VECT
+#endif
+#if defined(_WIN32) && defined(TYPE_DEBUG_ARRAY)
+  #undef TYPE_DEBUG_ARRAY
+#endif
+#if defined(_WIN32) && defined(TYPE_NAMED_VALUE_FLOAT)
+  #undef TYPE_NAMED_VALUE_FLOAT
+#endif
+#if defined(_WIN32) && defined(TYPE_NAMED_VALUE_INT)
+  #undef TYPE_NAMED_VALUE_INT
+#endif
+
   enum {
     TYPE_DEBUG = 0u,
     TYPE_DEBUG_VECT = 1u,
@@ -109,6 +126,26 @@ ros::message_operations::Printer< ::mavros_msgs::DebugValue_<ContainerAllocator>
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::DebugValue_<ContainerAllocator1> & lhs, const ::mavros_msgs::DebugValue_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.index == rhs.index &&
+    lhs.name == rhs.name &&
+    lhs.value_float == rhs.value_float &&
+    lhs.value_int == rhs.value_int &&
+    lhs.data == rhs.data &&
+    lhs.type == rhs.type;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::DebugValue_<ContainerAllocator1> & lhs, const ::mavros_msgs::DebugValue_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -116,12 +153,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

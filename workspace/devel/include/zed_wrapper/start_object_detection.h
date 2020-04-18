@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::start_object_detection > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::start_object_detectionRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_object_detection > 
+// service_traits::MD5Sum< ::zed_wrapper::start_object_detectionRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_object_detection >
 template<>
 struct MD5Sum< ::zed_wrapper::start_object_detectionRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::start_object_detectionRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_object_detectionRequest> should match 
-// service_traits::DataType< ::zed_wrapper::start_object_detection > 
+// service_traits::DataType< ::zed_wrapper::start_object_detectionRequest> should match
+// service_traits::DataType< ::zed_wrapper::start_object_detection >
 template<>
 struct DataType< ::zed_wrapper::start_object_detectionRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::start_object_detectionRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::start_object_detectionResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_object_detection > 
+// service_traits::MD5Sum< ::zed_wrapper::start_object_detectionResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_object_detection >
 template<>
 struct MD5Sum< ::zed_wrapper::start_object_detectionResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::start_object_detectionResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_object_detectionResponse> should match 
-// service_traits::DataType< ::zed_wrapper::start_object_detection > 
+// service_traits::DataType< ::zed_wrapper::start_object_detectionResponse> should match
+// service_traits::DataType< ::zed_wrapper::start_object_detection >
 template<>
 struct DataType< ::zed_wrapper::start_object_detectionResponse>
 {

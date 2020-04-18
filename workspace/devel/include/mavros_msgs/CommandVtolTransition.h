@@ -57,8 +57,8 @@ struct DataType< ::mavros_msgs::CommandVtolTransition > {
 };
 
 
-// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransitionRequest> should match 
-// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransition > 
+// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransitionRequest> should match
+// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransition >
 template<>
 struct MD5Sum< ::mavros_msgs::CommandVtolTransitionRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::mavros_msgs::CommandVtolTransitionRequest>
   }
 };
 
-// service_traits::DataType< ::mavros_msgs::CommandVtolTransitionRequest> should match 
-// service_traits::DataType< ::mavros_msgs::CommandVtolTransition > 
+// service_traits::DataType< ::mavros_msgs::CommandVtolTransitionRequest> should match
+// service_traits::DataType< ::mavros_msgs::CommandVtolTransition >
 template<>
 struct DataType< ::mavros_msgs::CommandVtolTransitionRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::mavros_msgs::CommandVtolTransitionRequest>
   }
 };
 
-// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransitionResponse> should match 
-// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransition > 
+// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransitionResponse> should match
+// service_traits::MD5Sum< ::mavros_msgs::CommandVtolTransition >
 template<>
 struct MD5Sum< ::mavros_msgs::CommandVtolTransitionResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::mavros_msgs::CommandVtolTransitionResponse>
   }
 };
 
-// service_traits::DataType< ::mavros_msgs::CommandVtolTransitionResponse> should match 
-// service_traits::DataType< ::mavros_msgs::CommandVtolTransition > 
+// service_traits::DataType< ::mavros_msgs::CommandVtolTransitionResponse> should match
+// service_traits::DataType< ::mavros_msgs::CommandVtolTransition >
 template<>
 struct DataType< ::mavros_msgs::CommandVtolTransitionResponse>
 {

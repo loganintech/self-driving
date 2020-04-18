@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::set_led_status > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::set_led_statusRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::set_led_status > 
+// service_traits::MD5Sum< ::zed_wrapper::set_led_statusRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::set_led_status >
 template<>
 struct MD5Sum< ::zed_wrapper::set_led_statusRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::set_led_statusRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::set_led_statusRequest> should match 
-// service_traits::DataType< ::zed_wrapper::set_led_status > 
+// service_traits::DataType< ::zed_wrapper::set_led_statusRequest> should match
+// service_traits::DataType< ::zed_wrapper::set_led_status >
 template<>
 struct DataType< ::zed_wrapper::set_led_statusRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::set_led_statusRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::set_led_statusResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::set_led_status > 
+// service_traits::MD5Sum< ::zed_wrapper::set_led_statusResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::set_led_status >
 template<>
 struct MD5Sum< ::zed_wrapper::set_led_statusResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::set_led_statusResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::set_led_statusResponse> should match 
-// service_traits::DataType< ::zed_wrapper::set_led_status > 
+// service_traits::DataType< ::zed_wrapper::set_led_statusResponse> should match
+// service_traits::DataType< ::zed_wrapper::set_led_status >
 template<>
 struct DataType< ::zed_wrapper::set_led_statusResponse>
 {

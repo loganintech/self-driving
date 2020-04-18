@@ -258,7 +258,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_sensor_orientation.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -916,7 +915,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melod
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/enum_to_string.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -2107,7 +2105,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavlink_diag.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -2301,9 +2298,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /home/nvidia/Dev/works
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/include/mavros/utils.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/src/lib/mavros.cpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/boost_161_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/class_loader/class_loader.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/class_loader/class_loader_core.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/class_loader/exceptions.hpp
@@ -2572,7 +2566,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/inclu
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/mavros.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -3066,9 +3059,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /home/nvidia/Dev/wor
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/include/mavros/utils.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/src/lib/uas_data.cpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/boost_161_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticArray.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticStatus.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/KeyValue.h
@@ -3329,7 +3319,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/inc
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_data.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -3812,9 +3801,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /home/nvidia/De
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/include/mavros/utils.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/src/lib/uas_stringify.cpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/boost_161_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticArray.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticStatus.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/KeyValue.h
@@ -4075,7 +4061,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodi
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_stringify.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -4558,9 +4543,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /home/nvidia/Dev
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/include/mavros/utils.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros/src/lib/uas_timesync.cpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/boost_161_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticArray.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/DiagnosticStatus.h
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/diagnostic_msgs/KeyValue.h
@@ -4821,7 +4803,6 @@ mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/mavros/CMakeFiles/mavros.dir/src/lib/uas_timesync.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp

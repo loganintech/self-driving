@@ -49,6 +49,38 @@ struct ExtendedState_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(VTOL_STATE_UNDEFINED)
+  #undef VTOL_STATE_UNDEFINED
+#endif
+#if defined(_WIN32) && defined(VTOL_STATE_TRANSITION_TO_FW)
+  #undef VTOL_STATE_TRANSITION_TO_FW
+#endif
+#if defined(_WIN32) && defined(VTOL_STATE_TRANSITION_TO_MC)
+  #undef VTOL_STATE_TRANSITION_TO_MC
+#endif
+#if defined(_WIN32) && defined(VTOL_STATE_MC)
+  #undef VTOL_STATE_MC
+#endif
+#if defined(_WIN32) && defined(VTOL_STATE_FW)
+  #undef VTOL_STATE_FW
+#endif
+#if defined(_WIN32) && defined(LANDED_STATE_UNDEFINED)
+  #undef LANDED_STATE_UNDEFINED
+#endif
+#if defined(_WIN32) && defined(LANDED_STATE_ON_GROUND)
+  #undef LANDED_STATE_ON_GROUND
+#endif
+#if defined(_WIN32) && defined(LANDED_STATE_IN_AIR)
+  #undef LANDED_STATE_IN_AIR
+#endif
+#if defined(_WIN32) && defined(LANDED_STATE_TAKEOFF)
+  #undef LANDED_STATE_TAKEOFF
+#endif
+#if defined(_WIN32) && defined(LANDED_STATE_LANDING)
+  #undef LANDED_STATE_LANDING
+#endif
+
   enum {
     VTOL_STATE_UNDEFINED = 0u,
     VTOL_STATE_TRANSITION_TO_FW = 1u,
@@ -104,6 +136,22 @@ ros::message_operations::Printer< ::mavros_msgs::ExtendedState_<ContainerAllocat
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::ExtendedState_<ContainerAllocator1> & lhs, const ::mavros_msgs::ExtendedState_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.vtol_state == rhs.vtol_state &&
+    lhs.landed_state == rhs.landed_state;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::ExtendedState_<ContainerAllocator1> & lhs, const ::mavros_msgs::ExtendedState_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -111,12 +159,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

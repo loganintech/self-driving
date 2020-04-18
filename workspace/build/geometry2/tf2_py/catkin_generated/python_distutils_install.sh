@@ -9,7 +9,6 @@ if [ -n "$DESTDIR" ] ; then
             /bin/echo "otherwise python's distutils will bork things."
             exit 1
     esac
-    DESTDIR_ARG="--root=$DESTDIR"
 fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
@@ -29,5 +28,5 @@ echo_and_run /usr/bin/env \
     "/home/nvidia/Dev/workspace/src/geometry2/tf2_py/setup.py" \
     build --build-base "/home/nvidia/Dev/workspace/build/geometry2/tf2_py" \
     install \
-    $DESTDIR_ARG \
+    --root="${DESTDIR-/}" \
     --install-layout=deb --prefix="/home/nvidia/Dev/workspace/install" --install-scripts="/home/nvidia/Dev/workspace/install/bin"

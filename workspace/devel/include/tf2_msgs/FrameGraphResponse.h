@@ -61,6 +61,20 @@ ros::message_operations::Printer< ::tf2_msgs::FrameGraphResponse_<ContainerAlloc
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::tf2_msgs::FrameGraphResponse_<ContainerAllocator1> & lhs, const ::tf2_msgs::FrameGraphResponse_<ContainerAllocator2> & rhs)
+{
+  return lhs.frame_yaml == rhs.frame_yaml;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::tf2_msgs::FrameGraphResponse_<ContainerAllocator1> & lhs, const ::tf2_msgs::FrameGraphResponse_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace tf2_msgs
 
 namespace ros
@@ -68,12 +82,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'actionlib_msgs': ['/opt/ros/melodic/share/actionlib_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'tf2_msgs': ['/home/nvidia/Dev/workspace/src/geometry2/tf2_msgs/msg', '/home/nvidia/Dev/workspace/devel/share/tf2_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

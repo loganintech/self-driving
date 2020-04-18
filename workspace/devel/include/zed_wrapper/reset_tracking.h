@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::reset_tracking > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::reset_trackingRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::reset_tracking > 
+// service_traits::MD5Sum< ::zed_wrapper::reset_trackingRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::reset_tracking >
 template<>
 struct MD5Sum< ::zed_wrapper::reset_trackingRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::reset_trackingRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::reset_trackingRequest> should match 
-// service_traits::DataType< ::zed_wrapper::reset_tracking > 
+// service_traits::DataType< ::zed_wrapper::reset_trackingRequest> should match
+// service_traits::DataType< ::zed_wrapper::reset_tracking >
 template<>
 struct DataType< ::zed_wrapper::reset_trackingRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::reset_trackingRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::reset_trackingResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::reset_tracking > 
+// service_traits::MD5Sum< ::zed_wrapper::reset_trackingResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::reset_tracking >
 template<>
 struct MD5Sum< ::zed_wrapper::reset_trackingResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::reset_trackingResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::reset_trackingResponse> should match 
-// service_traits::DataType< ::zed_wrapper::reset_tracking > 
+// service_traits::DataType< ::zed_wrapper::reset_trackingResponse> should match
+// service_traits::DataType< ::zed_wrapper::reset_tracking >
 template<>
 struct DataType< ::zed_wrapper::reset_trackingResponse>
 {

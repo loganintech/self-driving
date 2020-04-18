@@ -47,9 +47,6 @@ geometry2/tf2_ros/CMakeFiles/tf2_ros_buffer_server.dir/src/buffer_server_main.cp
  /opt/ros/melodic/include/actionlib_msgs/GoalID.h
  /opt/ros/melodic/include/actionlib_msgs/GoalStatus.h
  /opt/ros/melodic/include/actionlib_msgs/GoalStatusArray.h
- /opt/ros/melodic/include/boost_161_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/melodic/include/geometry_msgs/Quaternion.h
  /opt/ros/melodic/include/geometry_msgs/Transform.h
  /opt/ros/melodic/include/geometry_msgs/TransformStamped.h

@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::start_3d_mapping > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::start_3d_mappingRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_3d_mapping > 
+// service_traits::MD5Sum< ::zed_wrapper::start_3d_mappingRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_3d_mapping >
 template<>
 struct MD5Sum< ::zed_wrapper::start_3d_mappingRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::start_3d_mappingRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_3d_mappingRequest> should match 
-// service_traits::DataType< ::zed_wrapper::start_3d_mapping > 
+// service_traits::DataType< ::zed_wrapper::start_3d_mappingRequest> should match
+// service_traits::DataType< ::zed_wrapper::start_3d_mapping >
 template<>
 struct DataType< ::zed_wrapper::start_3d_mappingRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::start_3d_mappingRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::start_3d_mappingResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_3d_mapping > 
+// service_traits::MD5Sum< ::zed_wrapper::start_3d_mappingResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_3d_mapping >
 template<>
 struct MD5Sum< ::zed_wrapper::start_3d_mappingResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::start_3d_mappingResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_3d_mappingResponse> should match 
-// service_traits::DataType< ::zed_wrapper::start_3d_mapping > 
+// service_traits::DataType< ::zed_wrapper::start_3d_mappingResponse> should match
+// service_traits::DataType< ::zed_wrapper::start_3d_mapping >
 template<>
 struct DataType< ::zed_wrapper::start_3d_mappingResponse>
 {

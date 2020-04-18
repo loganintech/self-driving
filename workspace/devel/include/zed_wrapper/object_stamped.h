@@ -109,6 +109,28 @@ ros::message_operations::Printer< ::zed_wrapper::object_stamped_<ContainerAlloca
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::zed_wrapper::object_stamped_<ContainerAllocator1> & lhs, const ::zed_wrapper::object_stamped_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.label == rhs.label &&
+    lhs.label_id == rhs.label_id &&
+    lhs.confidence == rhs.confidence &&
+    lhs.position == rhs.position &&
+    lhs.linear_vel == rhs.linear_vel &&
+    lhs.tracking_state == rhs.tracking_state &&
+    lhs.bbox_2d == rhs.bbox_2d &&
+    lhs.bbox_3d == rhs.bbox_3d;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::zed_wrapper::object_stamped_<ContainerAllocator1> & lhs, const ::zed_wrapper::object_stamped_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace zed_wrapper
 
 namespace ros
@@ -116,12 +138,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'zed_wrapper': ['/home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_wrapper/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

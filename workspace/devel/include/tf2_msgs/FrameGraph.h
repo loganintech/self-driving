@@ -57,8 +57,8 @@ struct DataType< ::tf2_msgs::FrameGraph > {
 };
 
 
-// service_traits::MD5Sum< ::tf2_msgs::FrameGraphRequest> should match 
-// service_traits::MD5Sum< ::tf2_msgs::FrameGraph > 
+// service_traits::MD5Sum< ::tf2_msgs::FrameGraphRequest> should match
+// service_traits::MD5Sum< ::tf2_msgs::FrameGraph >
 template<>
 struct MD5Sum< ::tf2_msgs::FrameGraphRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::tf2_msgs::FrameGraphRequest>
   }
 };
 
-// service_traits::DataType< ::tf2_msgs::FrameGraphRequest> should match 
-// service_traits::DataType< ::tf2_msgs::FrameGraph > 
+// service_traits::DataType< ::tf2_msgs::FrameGraphRequest> should match
+// service_traits::DataType< ::tf2_msgs::FrameGraph >
 template<>
 struct DataType< ::tf2_msgs::FrameGraphRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::tf2_msgs::FrameGraphRequest>
   }
 };
 
-// service_traits::MD5Sum< ::tf2_msgs::FrameGraphResponse> should match 
-// service_traits::MD5Sum< ::tf2_msgs::FrameGraph > 
+// service_traits::MD5Sum< ::tf2_msgs::FrameGraphResponse> should match
+// service_traits::MD5Sum< ::tf2_msgs::FrameGraph >
 template<>
 struct MD5Sum< ::tf2_msgs::FrameGraphResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::tf2_msgs::FrameGraphResponse>
   }
 };
 
-// service_traits::DataType< ::tf2_msgs::FrameGraphResponse> should match 
-// service_traits::DataType< ::tf2_msgs::FrameGraph > 
+// service_traits::DataType< ::tf2_msgs::FrameGraphResponse> should match
+// service_traits::DataType< ::tf2_msgs::FrameGraph >
 template<>
 struct DataType< ::tf2_msgs::FrameGraphResponse>
 {

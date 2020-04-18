@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::stop_svo_recording > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recordingRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recording > 
+// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recordingRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recording >
 template<>
 struct MD5Sum< ::zed_wrapper::stop_svo_recordingRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::stop_svo_recordingRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::stop_svo_recordingRequest> should match 
-// service_traits::DataType< ::zed_wrapper::stop_svo_recording > 
+// service_traits::DataType< ::zed_wrapper::stop_svo_recordingRequest> should match
+// service_traits::DataType< ::zed_wrapper::stop_svo_recording >
 template<>
 struct DataType< ::zed_wrapper::stop_svo_recordingRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::stop_svo_recordingRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recordingResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recording > 
+// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recordingResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::stop_svo_recording >
 template<>
 struct MD5Sum< ::zed_wrapper::stop_svo_recordingResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::stop_svo_recordingResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::stop_svo_recordingResponse> should match 
-// service_traits::DataType< ::zed_wrapper::stop_svo_recording > 
+// service_traits::DataType< ::zed_wrapper::stop_svo_recordingResponse> should match
+// service_traits::DataType< ::zed_wrapper::stop_svo_recording >
 template<>
 struct DataType< ::zed_wrapper::stop_svo_recordingResponse>
 {

@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::toggle_led > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::toggle_ledRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::toggle_led > 
+// service_traits::MD5Sum< ::zed_wrapper::toggle_ledRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::toggle_led >
 template<>
 struct MD5Sum< ::zed_wrapper::toggle_ledRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::toggle_ledRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::toggle_ledRequest> should match 
-// service_traits::DataType< ::zed_wrapper::toggle_led > 
+// service_traits::DataType< ::zed_wrapper::toggle_ledRequest> should match
+// service_traits::DataType< ::zed_wrapper::toggle_led >
 template<>
 struct DataType< ::zed_wrapper::toggle_ledRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::toggle_ledRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::toggle_ledResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::toggle_led > 
+// service_traits::MD5Sum< ::zed_wrapper::toggle_ledResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::toggle_led >
 template<>
 struct MD5Sum< ::zed_wrapper::toggle_ledResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::toggle_ledResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::toggle_ledResponse> should match 
-// service_traits::DataType< ::zed_wrapper::toggle_led > 
+// service_traits::DataType< ::zed_wrapper::toggle_ledResponse> should match
+// service_traits::DataType< ::zed_wrapper::toggle_led >
 template<>
 struct DataType< ::zed_wrapper::toggle_ledResponse>
 {

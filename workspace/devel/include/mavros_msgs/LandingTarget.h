@@ -81,6 +81,56 @@ struct LandingTarget_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(GLOBAL)
+  #undef GLOBAL
+#endif
+#if defined(_WIN32) && defined(LOCAL_NED)
+  #undef LOCAL_NED
+#endif
+#if defined(_WIN32) && defined(MISSION)
+  #undef MISSION
+#endif
+#if defined(_WIN32) && defined(GLOBAL_RELATIVE_ALT)
+  #undef GLOBAL_RELATIVE_ALT
+#endif
+#if defined(_WIN32) && defined(LOCAL_ENU)
+  #undef LOCAL_ENU
+#endif
+#if defined(_WIN32) && defined(GLOBAL_INT)
+  #undef GLOBAL_INT
+#endif
+#if defined(_WIN32) && defined(GLOBAL_RELATIVE_ALT_INT)
+  #undef GLOBAL_RELATIVE_ALT_INT
+#endif
+#if defined(_WIN32) && defined(LOCAL_OFFSET_NED)
+  #undef LOCAL_OFFSET_NED
+#endif
+#if defined(_WIN32) && defined(BODY_NED)
+  #undef BODY_NED
+#endif
+#if defined(_WIN32) && defined(BODY_OFFSET_NED)
+  #undef BODY_OFFSET_NED
+#endif
+#if defined(_WIN32) && defined(GLOBAL_TERRAIN_ALT)
+  #undef GLOBAL_TERRAIN_ALT
+#endif
+#if defined(_WIN32) && defined(GLOBAL_TERRAIN_ALT_INT)
+  #undef GLOBAL_TERRAIN_ALT_INT
+#endif
+#if defined(_WIN32) && defined(LIGHT_BEACON)
+  #undef LIGHT_BEACON
+#endif
+#if defined(_WIN32) && defined(RADIO_BEACON)
+  #undef RADIO_BEACON
+#endif
+#if defined(_WIN32) && defined(VISION_FIDUCIAL)
+  #undef VISION_FIDUCIAL
+#endif
+#if defined(_WIN32) && defined(VISION_OTHER)
+  #undef VISION_OTHER
+#endif
+
   enum {
     GLOBAL = 0u,
     LOCAL_NED = 2u,
@@ -154,6 +204,27 @@ ros::message_operations::Printer< ::mavros_msgs::LandingTarget_<ContainerAllocat
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::LandingTarget_<ContainerAllocator1> & lhs, const ::mavros_msgs::LandingTarget_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.target_num == rhs.target_num &&
+    lhs.frame == rhs.frame &&
+    lhs.angle == rhs.angle &&
+    lhs.distance == rhs.distance &&
+    lhs.size == rhs.size &&
+    lhs.pose == rhs.pose &&
+    lhs.type == rhs.type;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::LandingTarget_<ContainerAllocator1> & lhs, const ::mavros_msgs::LandingTarget_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -161,12 +232,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

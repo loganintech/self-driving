@@ -250,7 +250,6 @@ mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -606,7 +605,6 @@ mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/i
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/interface.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -961,7 +959,6 @@ mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/incl
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/serial.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -1316,7 +1313,6 @@ mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/tcp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
@@ -1671,7 +1667,6 @@ mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
-mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
 mavros/libmavconn/CMakeFiles/mavconn.dir/src/udp.cpp.o: /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/nvidia/Dev/workspace/build
 include geometry2/test_tf2/CMakeFiles/run_tests_test_tf2_rostest_test_static_publisher.launch.dir/progress.make
 
 geometry2/test_tf2/CMakeFiles/run_tests_test_tf2_rostest_test_static_publisher.launch:
-	cd /home/nvidia/Dev/workspace/build/geometry2/test_tf2 && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/nvidia/Dev/workspace/build/test_results/test_tf2/rostest-test_static_publisher.xml "/opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/nvidia/Dev/workspace/src/geometry2/test_tf2 --package=test_tf2 --results-filename test_static_publisher.xml --results-base-dir \"/home/nvidia/Dev/workspace/build/test_results\" /home/nvidia/Dev/workspace/src/geometry2/test_tf2/test/static_publisher.launch "
+	cd /home/nvidia/Dev/workspace/build/geometry2/test_tf2 && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/nvidia/Dev/workspace/build/test_results/test_tf2/rostest-test_static_publisher.xml "/usr/bin/python2 /opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/nvidia/Dev/workspace/src/geometry2/test_tf2 --package=test_tf2 --results-filename test_static_publisher.xml --results-base-dir \"/home/nvidia/Dev/workspace/build/test_results\" /home/nvidia/Dev/workspace/src/geometry2/test_tf2/test/static_publisher.launch "
 
 run_tests_test_tf2_rostest_test_static_publisher.launch: geometry2/test_tf2/CMakeFiles/run_tests_test_tf2_rostest_test_static_publisher.launch
 run_tests_test_tf2_rostest_test_static_publisher.launch: geometry2/test_tf2/CMakeFiles/run_tests_test_tf2_rostest_test_static_publisher.launch.dir/build.make

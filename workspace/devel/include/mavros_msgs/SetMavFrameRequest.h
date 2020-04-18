@@ -38,6 +38,68 @@ struct SetMavFrameRequest_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(FRAME_GLOBAL)
+  #undef FRAME_GLOBAL
+#endif
+#if defined(_WIN32) && defined(FRAME_LOCAL_NED)
+  #undef FRAME_LOCAL_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_MISSION)
+  #undef FRAME_MISSION
+#endif
+#if defined(_WIN32) && defined(FRAME_GLOBAL_RELATIVE_ALT)
+  #undef FRAME_GLOBAL_RELATIVE_ALT
+#endif
+#if defined(_WIN32) && defined(FRAME_LOCAL_ENU)
+  #undef FRAME_LOCAL_ENU
+#endif
+#if defined(_WIN32) && defined(FRAME_GLOBAL_INT)
+  #undef FRAME_GLOBAL_INT
+#endif
+#if defined(_WIN32) && defined(FRAME_GLOBAL_RELATIVE_ALT_INT)
+  #undef FRAME_GLOBAL_RELATIVE_ALT_INT
+#endif
+#if defined(_WIN32) && defined(FRAME_LOCAL_OFFSET_NED)
+  #undef FRAME_LOCAL_OFFSET_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_BODY_NED)
+  #undef FRAME_BODY_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_BODY_OFFSET_NED)
+  #undef FRAME_BODY_OFFSET_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_GLOBAL_TERRAIN_ALT)
+  #undef FRAME_GLOBAL_TERRAIN_ALT
+#endif
+#if defined(_WIN32) && defined(FRAME_GLOBAL_TERRAIN_ALT_INT)
+  #undef FRAME_GLOBAL_TERRAIN_ALT_INT
+#endif
+#if defined(_WIN32) && defined(FRAME_BODY_FRD)
+  #undef FRAME_BODY_FRD
+#endif
+#if defined(_WIN32) && defined(FRAME_BODY_FLU)
+  #undef FRAME_BODY_FLU
+#endif
+#if defined(_WIN32) && defined(FRAME_MOCAP_NED)
+  #undef FRAME_MOCAP_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_MOCAP_ENU)
+  #undef FRAME_MOCAP_ENU
+#endif
+#if defined(_WIN32) && defined(FRAME_VISION_NED)
+  #undef FRAME_VISION_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_VISION_ENU)
+  #undef FRAME_VISION_ENU
+#endif
+#if defined(_WIN32) && defined(FRAME_ESTIM_NED)
+  #undef FRAME_ESTIM_NED
+#endif
+#if defined(_WIN32) && defined(FRAME_ESTIM_ENU)
+  #undef FRAME_ESTIM_ENU
+#endif
+
   enum {
     FRAME_GLOBAL = 0u,
     FRAME_LOCAL_NED = 1u,
@@ -123,6 +185,20 @@ ros::message_operations::Printer< ::mavros_msgs::SetMavFrameRequest_<ContainerAl
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::SetMavFrameRequest_<ContainerAllocator1> & lhs, const ::mavros_msgs::SetMavFrameRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.mav_frame == rhs.mav_frame;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::SetMavFrameRequest_<ContainerAllocator1> & lhs, const ::mavros_msgs::SetMavFrameRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -130,12 +206,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

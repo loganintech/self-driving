@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::set_pose > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::set_poseRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::set_pose > 
+// service_traits::MD5Sum< ::zed_wrapper::set_poseRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::set_pose >
 template<>
 struct MD5Sum< ::zed_wrapper::set_poseRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::set_poseRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::set_poseRequest> should match 
-// service_traits::DataType< ::zed_wrapper::set_pose > 
+// service_traits::DataType< ::zed_wrapper::set_poseRequest> should match
+// service_traits::DataType< ::zed_wrapper::set_pose >
 template<>
 struct DataType< ::zed_wrapper::set_poseRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::set_poseRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::set_poseResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::set_pose > 
+// service_traits::MD5Sum< ::zed_wrapper::set_poseResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::set_pose >
 template<>
 struct MD5Sum< ::zed_wrapper::set_poseResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::set_poseResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::set_poseResponse> should match 
-// service_traits::DataType< ::zed_wrapper::set_pose > 
+// service_traits::DataType< ::zed_wrapper::set_poseResponse> should match
+// service_traits::DataType< ::zed_wrapper::set_pose >
 template<>
 struct DataType< ::zed_wrapper::set_poseResponse>
 {

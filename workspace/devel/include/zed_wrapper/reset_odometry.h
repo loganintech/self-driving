@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::reset_odometry > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::reset_odometryRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::reset_odometry > 
+// service_traits::MD5Sum< ::zed_wrapper::reset_odometryRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::reset_odometry >
 template<>
 struct MD5Sum< ::zed_wrapper::reset_odometryRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::reset_odometryRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::reset_odometryRequest> should match 
-// service_traits::DataType< ::zed_wrapper::reset_odometry > 
+// service_traits::DataType< ::zed_wrapper::reset_odometryRequest> should match
+// service_traits::DataType< ::zed_wrapper::reset_odometry >
 template<>
 struct DataType< ::zed_wrapper::reset_odometryRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::reset_odometryRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::reset_odometryResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::reset_odometry > 
+// service_traits::MD5Sum< ::zed_wrapper::reset_odometryResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::reset_odometry >
 template<>
 struct MD5Sum< ::zed_wrapper::reset_odometryResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::reset_odometryResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::reset_odometryResponse> should match 
-// service_traits::DataType< ::zed_wrapper::reset_odometry > 
+// service_traits::DataType< ::zed_wrapper::reset_odometryResponse> should match
+// service_traits::DataType< ::zed_wrapper::reset_odometry >
 template<>
 struct DataType< ::zed_wrapper::reset_odometryResponse>
 {

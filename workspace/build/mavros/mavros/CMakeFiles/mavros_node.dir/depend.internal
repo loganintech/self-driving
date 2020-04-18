@@ -34,9 +34,6 @@ mavros/mavros/CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o
  /home/nvidia/Dev/workspace/src/mavros/mavros/include/mavros/utils.h
  /home/nvidia/Dev/workspace/src/mavros/mavros/src/mavros_node.cpp
  /home/nvidia/Dev/workspace/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h
- /opt/ros/melodic/include/boost_161_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/melodic/include/class_loader/class_loader.hpp
  /opt/ros/melodic/include/class_loader/class_loader_core.hpp
  /opt/ros/melodic/include/class_loader/exceptions.hpp
@@ -304,7 +301,6 @@ mavros/mavros/CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_info.hpp
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_smart_battery_status.hpp
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
- /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_supported_tunes.hpp
  /opt/ros/melodic/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp

@@ -216,6 +216,40 @@ ros::message_operations::Printer< ::mavros_msgs::OnboardComputerStatus_<Containe
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::OnboardComputerStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::OnboardComputerStatus_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.component == rhs.component &&
+    lhs.uptime == rhs.uptime &&
+    lhs.type == rhs.type &&
+    lhs.cpu_cores == rhs.cpu_cores &&
+    lhs.cpu_combined == rhs.cpu_combined &&
+    lhs.gpu_cores == rhs.gpu_cores &&
+    lhs.gpu_combined == rhs.gpu_combined &&
+    lhs.temperature_board == rhs.temperature_board &&
+    lhs.temperature_core == rhs.temperature_core &&
+    lhs.fan_speed == rhs.fan_speed &&
+    lhs.ram_usage == rhs.ram_usage &&
+    lhs.ram_total == rhs.ram_total &&
+    lhs.storage_type == rhs.storage_type &&
+    lhs.storage_usage == rhs.storage_usage &&
+    lhs.storage_total == rhs.storage_total &&
+    lhs.link_type == rhs.link_type &&
+    lhs.link_tx_rate == rhs.link_tx_rate &&
+    lhs.link_rx_rate == rhs.link_rx_rate &&
+    lhs.link_tx_max == rhs.link_tx_max &&
+    lhs.link_rx_max == rhs.link_rx_max;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::OnboardComputerStatus_<ContainerAllocator1> & lhs, const ::mavros_msgs::OnboardComputerStatus_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -223,12 +257,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

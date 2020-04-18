@@ -74,6 +74,32 @@ struct MountConfigureRequest_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(MODE_RETRACT)
+  #undef MODE_RETRACT
+#endif
+#if defined(_WIN32) && defined(MODE_NEUTRAL)
+  #undef MODE_NEUTRAL
+#endif
+#if defined(_WIN32) && defined(MODE_MAVLINK_TARGETING)
+  #undef MODE_MAVLINK_TARGETING
+#endif
+#if defined(_WIN32) && defined(MODE_RC_TARGETING)
+  #undef MODE_RC_TARGETING
+#endif
+#if defined(_WIN32) && defined(MODE_GPS_POINT)
+  #undef MODE_GPS_POINT
+#endif
+#if defined(_WIN32) && defined(INPUT_ANGLE_BODY_FRAME)
+  #undef INPUT_ANGLE_BODY_FRAME
+#endif
+#if defined(_WIN32) && defined(INPUT_ANGULAR_RATE)
+  #undef INPUT_ANGULAR_RATE
+#endif
+#if defined(_WIN32) && defined(INPUT_ANGLE_ABSOLUTE_FRAME)
+  #undef INPUT_ANGLE_ABSOLUTE_FRAME
+#endif
+
   enum {
     MODE_RETRACT = 0u,
     MODE_NEUTRAL = 1u,
@@ -123,6 +149,27 @@ ros::message_operations::Printer< ::mavros_msgs::MountConfigureRequest_<Containe
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::MountConfigureRequest_<ContainerAllocator1> & lhs, const ::mavros_msgs::MountConfigureRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.mode == rhs.mode &&
+    lhs.stabilize_roll == rhs.stabilize_roll &&
+    lhs.stabilize_pitch == rhs.stabilize_pitch &&
+    lhs.stabilize_yaw == rhs.stabilize_yaw &&
+    lhs.roll_input == rhs.roll_input &&
+    lhs.pitch_input == rhs.pitch_input &&
+    lhs.yaw_input == rhs.yaw_input;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::MountConfigureRequest_<ContainerAllocator1> & lhs, const ::mavros_msgs::MountConfigureRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -130,12 +177,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

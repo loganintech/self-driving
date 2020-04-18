@@ -139,7 +139,6 @@ mavros_sitl_test_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /usr/lib/aarch64-linux-gnu/libboost_signals.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
@@ -174,7 +173,6 @@ mavros_sitl_test_EXTERNAL_OBJECTS =
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/libmessage_filters.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/libroscpp.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /usr/lib/aarch64-linux-gnu/libboost_signals.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/nvidia/Dev/workspace/devel/lib/libmavros_sitl_test.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so

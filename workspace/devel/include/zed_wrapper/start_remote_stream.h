@@ -57,8 +57,8 @@ struct DataType< ::zed_wrapper::start_remote_stream > {
 };
 
 
-// service_traits::MD5Sum< ::zed_wrapper::start_remote_streamRequest> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_remote_stream > 
+// service_traits::MD5Sum< ::zed_wrapper::start_remote_streamRequest> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_remote_stream >
 template<>
 struct MD5Sum< ::zed_wrapper::start_remote_streamRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::zed_wrapper::start_remote_streamRequest>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_remote_streamRequest> should match 
-// service_traits::DataType< ::zed_wrapper::start_remote_stream > 
+// service_traits::DataType< ::zed_wrapper::start_remote_streamRequest> should match
+// service_traits::DataType< ::zed_wrapper::start_remote_stream >
 template<>
 struct DataType< ::zed_wrapper::start_remote_streamRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::zed_wrapper::start_remote_streamRequest>
   }
 };
 
-// service_traits::MD5Sum< ::zed_wrapper::start_remote_streamResponse> should match 
-// service_traits::MD5Sum< ::zed_wrapper::start_remote_stream > 
+// service_traits::MD5Sum< ::zed_wrapper::start_remote_streamResponse> should match
+// service_traits::MD5Sum< ::zed_wrapper::start_remote_stream >
 template<>
 struct MD5Sum< ::zed_wrapper::start_remote_streamResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::zed_wrapper::start_remote_streamResponse>
   }
 };
 
-// service_traits::DataType< ::zed_wrapper::start_remote_streamResponse> should match 
-// service_traits::DataType< ::zed_wrapper::start_remote_stream > 
+// service_traits::DataType< ::zed_wrapper::start_remote_streamResponse> should match
+// service_traits::DataType< ::zed_wrapper::start_remote_stream >
 template<>
 struct DataType< ::zed_wrapper::start_remote_streamResponse>
 {

@@ -69,9 +69,6 @@ zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/src/nodelet/src/zed_wrappe
  /home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_wrapper/src/nodelet/include/zed_wrapper_nodelet.hpp
  /home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_wrapper/src/nodelet/src/zed_wrapper_nodelet.cpp
  /home/nvidia/Dev/workspace/src/zed-ros-wrapper/zed_wrapper/src/tools/include/sl_tools.h
- /opt/ros/melodic/include/boost_161_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable.h
- /opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/melodic/include/class_loader/class_loader.hpp
  /opt/ros/melodic/include/class_loader/class_loader_core.hpp
  /opt/ros/melodic/include/class_loader/exceptions.hpp

@@ -35,6 +35,350 @@ struct CommandCode_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(AIRFRAME_CONFIGURATION)
+  #undef AIRFRAME_CONFIGURATION
+#endif
+#if defined(_WIN32) && defined(ARM_AUTHORIZATION_REQUEST)
+  #undef ARM_AUTHORIZATION_REQUEST
+#endif
+#if defined(_WIN32) && defined(COMPONENT_ARM_DISARM)
+  #undef COMPONENT_ARM_DISARM
+#endif
+#if defined(_WIN32) && defined(CONDITION_DELAY)
+  #undef CONDITION_DELAY
+#endif
+#if defined(_WIN32) && defined(CONDITION_CHANGE_ALT)
+  #undef CONDITION_CHANGE_ALT
+#endif
+#if defined(_WIN32) && defined(CONDITION_DISTANCE)
+  #undef CONDITION_DISTANCE
+#endif
+#if defined(_WIN32) && defined(CONDITION_YAW)
+  #undef CONDITION_YAW
+#endif
+#if defined(_WIN32) && defined(CONDITION_LAST)
+  #undef CONDITION_LAST
+#endif
+#if defined(_WIN32) && defined(CONTROL_HIGH_LATENCY)
+  #undef CONTROL_HIGH_LATENCY
+#endif
+#if defined(_WIN32) && defined(DO_FOLLOW)
+  #undef DO_FOLLOW
+#endif
+#if defined(_WIN32) && defined(DO_FOLLOW_REPOSITION)
+  #undef DO_FOLLOW_REPOSITION
+#endif
+#if defined(_WIN32) && defined(DO_SET_MODE)
+  #undef DO_SET_MODE
+#endif
+#if defined(_WIN32) && defined(DO_JUMP)
+  #undef DO_JUMP
+#endif
+#if defined(_WIN32) && defined(DO_CHANGE_SPEED)
+  #undef DO_CHANGE_SPEED
+#endif
+#if defined(_WIN32) && defined(DO_SET_HOME)
+  #undef DO_SET_HOME
+#endif
+#if defined(_WIN32) && defined(DO_SET_PARAMETER)
+  #undef DO_SET_PARAMETER
+#endif
+#if defined(_WIN32) && defined(DO_SET_RELAY)
+  #undef DO_SET_RELAY
+#endif
+#if defined(_WIN32) && defined(DO_REPEAT_RELAY)
+  #undef DO_REPEAT_RELAY
+#endif
+#if defined(_WIN32) && defined(DO_SET_SERVO)
+  #undef DO_SET_SERVO
+#endif
+#if defined(_WIN32) && defined(DO_REPEAT_SERVO)
+  #undef DO_REPEAT_SERVO
+#endif
+#if defined(_WIN32) && defined(DO_FLIGHTTERMINATION)
+  #undef DO_FLIGHTTERMINATION
+#endif
+#if defined(_WIN32) && defined(DO_CHANGE_ALTITUDE)
+  #undef DO_CHANGE_ALTITUDE
+#endif
+#if defined(_WIN32) && defined(DO_LAND_START)
+  #undef DO_LAND_START
+#endif
+#if defined(_WIN32) && defined(DO_RALLY_LAND)
+  #undef DO_RALLY_LAND
+#endif
+#if defined(_WIN32) && defined(DO_GO_AROUND)
+  #undef DO_GO_AROUND
+#endif
+#if defined(_WIN32) && defined(DO_REPOSITION)
+  #undef DO_REPOSITION
+#endif
+#if defined(_WIN32) && defined(DO_PAUSE_CONTINUE)
+  #undef DO_PAUSE_CONTINUE
+#endif
+#if defined(_WIN32) && defined(DO_SET_REVERSE)
+  #undef DO_SET_REVERSE
+#endif
+#if defined(_WIN32) && defined(DO_SET_ROI_LOCATION)
+  #undef DO_SET_ROI_LOCATION
+#endif
+#if defined(_WIN32) && defined(DO_SET_ROI_WPNEXT_OFFSET)
+  #undef DO_SET_ROI_WPNEXT_OFFSET
+#endif
+#if defined(_WIN32) && defined(DO_SET_ROI_NONE)
+  #undef DO_SET_ROI_NONE
+#endif
+#if defined(_WIN32) && defined(DO_CONTROL_VIDEO)
+  #undef DO_CONTROL_VIDEO
+#endif
+#if defined(_WIN32) && defined(DO_SET_ROI)
+  #undef DO_SET_ROI
+#endif
+#if defined(_WIN32) && defined(DO_DIGICAM_CONFIGURE)
+  #undef DO_DIGICAM_CONFIGURE
+#endif
+#if defined(_WIN32) && defined(DO_DIGICAM_CONTROL)
+  #undef DO_DIGICAM_CONTROL
+#endif
+#if defined(_WIN32) && defined(DO_MOUNT_CONFIGURE)
+  #undef DO_MOUNT_CONFIGURE
+#endif
+#if defined(_WIN32) && defined(DO_MOUNT_CONTROL)
+  #undef DO_MOUNT_CONTROL
+#endif
+#if defined(_WIN32) && defined(DO_SET_CAM_TRIGG_DIST)
+  #undef DO_SET_CAM_TRIGG_DIST
+#endif
+#if defined(_WIN32) && defined(DO_FENCE_ENABLE)
+  #undef DO_FENCE_ENABLE
+#endif
+#if defined(_WIN32) && defined(DO_PARACHUTE)
+  #undef DO_PARACHUTE
+#endif
+#if defined(_WIN32) && defined(DO_MOTOR_TEST)
+  #undef DO_MOTOR_TEST
+#endif
+#if defined(_WIN32) && defined(DO_INVERTED_FLIGHT)
+  #undef DO_INVERTED_FLIGHT
+#endif
+#if defined(_WIN32) && defined(DO_SET_CAM_TRIGG_INTERVAL)
+  #undef DO_SET_CAM_TRIGG_INTERVAL
+#endif
+#if defined(_WIN32) && defined(DO_MOUNT_CONTROL_QUAT)
+  #undef DO_MOUNT_CONTROL_QUAT
+#endif
+#if defined(_WIN32) && defined(DO_GUIDED_MASTER)
+  #undef DO_GUIDED_MASTER
+#endif
+#if defined(_WIN32) && defined(DO_GUIDED_LIMITS)
+  #undef DO_GUIDED_LIMITS
+#endif
+#if defined(_WIN32) && defined(DO_ENGINE_CONTROL)
+  #undef DO_ENGINE_CONTROL
+#endif
+#if defined(_WIN32) && defined(DO_SET_MISSION_CURRENT)
+  #undef DO_SET_MISSION_CURRENT
+#endif
+#if defined(_WIN32) && defined(DO_LAST)
+  #undef DO_LAST
+#endif
+#if defined(_WIN32) && defined(DO_JUMP_TAG)
+  #undef DO_JUMP_TAG
+#endif
+#if defined(_WIN32) && defined(DO_TRIGGER_CONTROL)
+  #undef DO_TRIGGER_CONTROL
+#endif
+#if defined(_WIN32) && defined(DO_VTOL_TRANSITION)
+  #undef DO_VTOL_TRANSITION
+#endif
+#if defined(_WIN32) && defined(GET_HOME_POSITION)
+  #undef GET_HOME_POSITION
+#endif
+#if defined(_WIN32) && defined(GET_MESSAGE_INTERVAL)
+  #undef GET_MESSAGE_INTERVAL
+#endif
+#if defined(_WIN32) && defined(IMAGE_START_CAPTURE)
+  #undef IMAGE_START_CAPTURE
+#endif
+#if defined(_WIN32) && defined(IMAGE_STOP_CAPTURE)
+  #undef IMAGE_STOP_CAPTURE
+#endif
+#if defined(_WIN32) && defined(JUMP_TAG)
+  #undef JUMP_TAG
+#endif
+#if defined(_WIN32) && defined(LOGGING_START)
+  #undef LOGGING_START
+#endif
+#if defined(_WIN32) && defined(LOGGING_STOP)
+  #undef LOGGING_STOP
+#endif
+#if defined(_WIN32) && defined(MISSION_START)
+  #undef MISSION_START
+#endif
+#if defined(_WIN32) && defined(NAV_WAYPOINT)
+  #undef NAV_WAYPOINT
+#endif
+#if defined(_WIN32) && defined(NAV_LOITER_UNLIM)
+  #undef NAV_LOITER_UNLIM
+#endif
+#if defined(_WIN32) && defined(NAV_LOITER_TURNS)
+  #undef NAV_LOITER_TURNS
+#endif
+#if defined(_WIN32) && defined(NAV_LOITER_TIME)
+  #undef NAV_LOITER_TIME
+#endif
+#if defined(_WIN32) && defined(NAV_RETURN_TO_LAUNCH)
+  #undef NAV_RETURN_TO_LAUNCH
+#endif
+#if defined(_WIN32) && defined(NAV_LAND)
+  #undef NAV_LAND
+#endif
+#if defined(_WIN32) && defined(NAV_TAKEOFF)
+  #undef NAV_TAKEOFF
+#endif
+#if defined(_WIN32) && defined(NAV_LAND_LOCAL)
+  #undef NAV_LAND_LOCAL
+#endif
+#if defined(_WIN32) && defined(NAV_TAKEOFF_LOCAL)
+  #undef NAV_TAKEOFF_LOCAL
+#endif
+#if defined(_WIN32) && defined(NAV_FOLLOW)
+  #undef NAV_FOLLOW
+#endif
+#if defined(_WIN32) && defined(NAV_CONTINUE_AND_CHANGE_ALT)
+  #undef NAV_CONTINUE_AND_CHANGE_ALT
+#endif
+#if defined(_WIN32) && defined(NAV_LOITER_TO_ALT)
+  #undef NAV_LOITER_TO_ALT
+#endif
+#if defined(_WIN32) && defined(NAV_ROI)
+  #undef NAV_ROI
+#endif
+#if defined(_WIN32) && defined(NAV_PATHPLANNING)
+  #undef NAV_PATHPLANNING
+#endif
+#if defined(_WIN32) && defined(NAV_SPLINE_WAYPOINT)
+  #undef NAV_SPLINE_WAYPOINT
+#endif
+#if defined(_WIN32) && defined(NAV_VTOL_TAKEOFF)
+  #undef NAV_VTOL_TAKEOFF
+#endif
+#if defined(_WIN32) && defined(NAV_VTOL_LAND)
+  #undef NAV_VTOL_LAND
+#endif
+#if defined(_WIN32) && defined(NAV_GUIDED_ENABLE)
+  #undef NAV_GUIDED_ENABLE
+#endif
+#if defined(_WIN32) && defined(NAV_DELAY)
+  #undef NAV_DELAY
+#endif
+#if defined(_WIN32) && defined(NAV_PAYLOAD_PLACE)
+  #undef NAV_PAYLOAD_PLACE
+#endif
+#if defined(_WIN32) && defined(NAV_LAST)
+  #undef NAV_LAST
+#endif
+#if defined(_WIN32) && defined(NAV_SET_YAW_SPEED)
+  #undef NAV_SET_YAW_SPEED
+#endif
+#if defined(_WIN32) && defined(NAV_FENCE_RETURN_POINT)
+  #undef NAV_FENCE_RETURN_POINT
+#endif
+#if defined(_WIN32) && defined(NAV_FENCE_POLYGON_VERTEX_INCLUSION)
+  #undef NAV_FENCE_POLYGON_VERTEX_INCLUSION
+#endif
+#if defined(_WIN32) && defined(NAV_FENCE_POLYGON_VERTEX_EXCLUSION)
+  #undef NAV_FENCE_POLYGON_VERTEX_EXCLUSION
+#endif
+#if defined(_WIN32) && defined(NAV_FENCE_CIRCLE_INCLUSION)
+  #undef NAV_FENCE_CIRCLE_INCLUSION
+#endif
+#if defined(_WIN32) && defined(NAV_FENCE_CIRCLE_EXCLUSION)
+  #undef NAV_FENCE_CIRCLE_EXCLUSION
+#endif
+#if defined(_WIN32) && defined(NAV_RALLY_POINT)
+  #undef NAV_RALLY_POINT
+#endif
+#if defined(_WIN32) && defined(OVERRIDE_GOTO)
+  #undef OVERRIDE_GOTO
+#endif
+#if defined(_WIN32) && defined(PANORAMA_CREATE)
+  #undef PANORAMA_CREATE
+#endif
+#if defined(_WIN32) && defined(PAYLOAD_PREPARE_DEPLOY)
+  #undef PAYLOAD_PREPARE_DEPLOY
+#endif
+#if defined(_WIN32) && defined(PAYLOAD_CONTROL_DEPLOY)
+  #undef PAYLOAD_CONTROL_DEPLOY
+#endif
+#if defined(_WIN32) && defined(PREFLIGHT_CALIBRATION)
+  #undef PREFLIGHT_CALIBRATION
+#endif
+#if defined(_WIN32) && defined(PREFLIGHT_SET_SENSOR_OFFSETS)
+  #undef PREFLIGHT_SET_SENSOR_OFFSETS
+#endif
+#if defined(_WIN32) && defined(PREFLIGHT_UAVCAN)
+  #undef PREFLIGHT_UAVCAN
+#endif
+#if defined(_WIN32) && defined(PREFLIGHT_STORAGE)
+  #undef PREFLIGHT_STORAGE
+#endif
+#if defined(_WIN32) && defined(PREFLIGHT_REBOOT_SHUTDOWN)
+  #undef PREFLIGHT_REBOOT_SHUTDOWN
+#endif
+#if defined(_WIN32) && defined(REQUEST_MESSAGE)
+  #undef REQUEST_MESSAGE
+#endif
+#if defined(_WIN32) && defined(REQUEST_AUTOPILOT_CAPABILITIES)
+  #undef REQUEST_AUTOPILOT_CAPABILITIES
+#endif
+#if defined(_WIN32) && defined(REQUEST_CAMERA_INFORMATION)
+  #undef REQUEST_CAMERA_INFORMATION
+#endif
+#if defined(_WIN32) && defined(REQUEST_CAMERA_SETTINGS)
+  #undef REQUEST_CAMERA_SETTINGS
+#endif
+#if defined(_WIN32) && defined(REQUEST_STORAGE_INFORMATION)
+  #undef REQUEST_STORAGE_INFORMATION
+#endif
+#if defined(_WIN32) && defined(REQUEST_CAMERA_CAPTURE_STATUS)
+  #undef REQUEST_CAMERA_CAPTURE_STATUS
+#endif
+#if defined(_WIN32) && defined(REQUEST_FLIGHT_INFORMATION)
+  #undef REQUEST_FLIGHT_INFORMATION
+#endif
+#if defined(_WIN32) && defined(RESET_CAMERA_SETTINGS)
+  #undef RESET_CAMERA_SETTINGS
+#endif
+#if defined(_WIN32) && defined(SET_MESSAGE_INTERVAL)
+  #undef SET_MESSAGE_INTERVAL
+#endif
+#if defined(_WIN32) && defined(SET_CAMERA_MODE)
+  #undef SET_CAMERA_MODE
+#endif
+#if defined(_WIN32) && defined(SET_GUIDED_SUBMODE_STANDARD)
+  #undef SET_GUIDED_SUBMODE_STANDARD
+#endif
+#if defined(_WIN32) && defined(SET_GUIDED_SUBMODE_CIRCLE)
+  #undef SET_GUIDED_SUBMODE_CIRCLE
+#endif
+#if defined(_WIN32) && defined(START_RX_PAIR)
+  #undef START_RX_PAIR
+#endif
+#if defined(_WIN32) && defined(STORAGE_FORMAT)
+  #undef STORAGE_FORMAT
+#endif
+#if defined(_WIN32) && defined(UAVCAN_GET_NODE_INFO)
+  #undef UAVCAN_GET_NODE_INFO
+#endif
+#if defined(_WIN32) && defined(VIDEO_START_CAPTURE)
+  #undef VIDEO_START_CAPTURE
+#endif
+#if defined(_WIN32) && defined(VIDEO_STOP_CAPTURE)
+  #undef VIDEO_STOP_CAPTURE
+#endif
+
   enum {
     AIRFRAME_CONFIGURATION = 2520u,
     ARM_AUTHORIZATION_REQUEST = 3001u,
@@ -402,6 +746,7 @@ ros::message_operations::Printer< ::mavros_msgs::CommandCode_<ContainerAllocator
 return s;
 }
 
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -409,12 +754,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

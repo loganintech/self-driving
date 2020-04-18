@@ -104,6 +104,95 @@ struct ADSBVehicle_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(ALT_PRESSURE_QNH)
+  #undef ALT_PRESSURE_QNH
+#endif
+#if defined(_WIN32) && defined(ALT_GEOMETRIC)
+  #undef ALT_GEOMETRIC
+#endif
+#if defined(_WIN32) && defined(EMITTER_NO_INFO)
+  #undef EMITTER_NO_INFO
+#endif
+#if defined(_WIN32) && defined(EMITTER_LIGHT)
+  #undef EMITTER_LIGHT
+#endif
+#if defined(_WIN32) && defined(EMITTER_SMALL)
+  #undef EMITTER_SMALL
+#endif
+#if defined(_WIN32) && defined(EMITTER_LARGE)
+  #undef EMITTER_LARGE
+#endif
+#if defined(_WIN32) && defined(EMITTER_HIGH_VORTEX_LARGE)
+  #undef EMITTER_HIGH_VORTEX_LARGE
+#endif
+#if defined(_WIN32) && defined(EMITTER_HEAVY)
+  #undef EMITTER_HEAVY
+#endif
+#if defined(_WIN32) && defined(EMITTER_HIGHLY_MANUV)
+  #undef EMITTER_HIGHLY_MANUV
+#endif
+#if defined(_WIN32) && defined(EMITTER_ROTOCRAFT)
+  #undef EMITTER_ROTOCRAFT
+#endif
+#if defined(_WIN32) && defined(EMITTER_UNASSIGNED)
+  #undef EMITTER_UNASSIGNED
+#endif
+#if defined(_WIN32) && defined(EMITTER_GLIDER)
+  #undef EMITTER_GLIDER
+#endif
+#if defined(_WIN32) && defined(EMITTER_LIGHTER_AIR)
+  #undef EMITTER_LIGHTER_AIR
+#endif
+#if defined(_WIN32) && defined(EMITTER_PARACHUTE)
+  #undef EMITTER_PARACHUTE
+#endif
+#if defined(_WIN32) && defined(EMITTER_ULTRA_LIGHT)
+  #undef EMITTER_ULTRA_LIGHT
+#endif
+#if defined(_WIN32) && defined(EMITTER_UNASSIGNED2)
+  #undef EMITTER_UNASSIGNED2
+#endif
+#if defined(_WIN32) && defined(EMITTER_UAV)
+  #undef EMITTER_UAV
+#endif
+#if defined(_WIN32) && defined(EMITTER_SPACE)
+  #undef EMITTER_SPACE
+#endif
+#if defined(_WIN32) && defined(EMITTER_UNASSGINED3)
+  #undef EMITTER_UNASSGINED3
+#endif
+#if defined(_WIN32) && defined(EMITTER_EMERGENCY_SURFACE)
+  #undef EMITTER_EMERGENCY_SURFACE
+#endif
+#if defined(_WIN32) && defined(EMITTER_SERVICE_SURFACE)
+  #undef EMITTER_SERVICE_SURFACE
+#endif
+#if defined(_WIN32) && defined(EMITTER_POINT_OBSTACLE)
+  #undef EMITTER_POINT_OBSTACLE
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_COORDS)
+  #undef FLAG_VALID_COORDS
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_ALTITUDE)
+  #undef FLAG_VALID_ALTITUDE
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_HEADING)
+  #undef FLAG_VALID_HEADING
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_VELOCITY)
+  #undef FLAG_VALID_VELOCITY
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_CALLSIGN)
+  #undef FLAG_VALID_CALLSIGN
+#endif
+#if defined(_WIN32) && defined(FLAG_VALID_SQUAWK)
+  #undef FLAG_VALID_SQUAWK
+#endif
+#if defined(_WIN32) && defined(FLAG_SIMULATED)
+  #undef FLAG_SIMULATED
+#endif
+
   enum {
     ALT_PRESSURE_QNH = 0u,
     ALT_GEOMETRIC = 1u,
@@ -216,6 +305,33 @@ ros::message_operations::Printer< ::mavros_msgs::ADSBVehicle_<ContainerAllocator
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::mavros_msgs::ADSBVehicle_<ContainerAllocator1> & lhs, const ::mavros_msgs::ADSBVehicle_<ContainerAllocator2> & rhs)
+{
+  return lhs.header == rhs.header &&
+    lhs.ICAO_address == rhs.ICAO_address &&
+    lhs.callsign == rhs.callsign &&
+    lhs.latitude == rhs.latitude &&
+    lhs.longitude == rhs.longitude &&
+    lhs.altitude == rhs.altitude &&
+    lhs.heading == rhs.heading &&
+    lhs.hor_velocity == rhs.hor_velocity &&
+    lhs.ver_velocity == rhs.ver_velocity &&
+    lhs.altitude_type == rhs.altitude_type &&
+    lhs.emitter_type == rhs.emitter_type &&
+    lhs.tslc == rhs.tslc &&
+    lhs.flags == rhs.flags &&
+    lhs.squawk == rhs.squawk;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::mavros_msgs::ADSBVehicle_<ContainerAllocator1> & lhs, const ::mavros_msgs::ADSBVehicle_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace mavros_msgs
 
 namespace ros
@@ -223,12 +339,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geographic_msgs': ['/opt/ros/melodic/share/geographic_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'mavros_msgs': ['/home/nvidia/Dev/workspace/src/mavros/mavros_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'uuid_msgs': ['/opt/ros/melodic/share/uuid_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

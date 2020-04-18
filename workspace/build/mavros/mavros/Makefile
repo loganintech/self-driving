@@ -68,16 +68,29 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target test
 test:
@@ -111,29 +124,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_run_tests_mavros_gtest_libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+trajectory_msgs_generate_messages_py: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
-.PHONY : _run_tests_mavros_gtest_libmavros-quaternion-utils-test
+.PHONY : trajectory_msgs_generate_messages_py
 
 # fast build rule for target.
-_run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build
-.PHONY : _run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast
+trajectory_msgs_generate_messages_py/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
+
+# Convenience name for target.
+libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
+
+.PHONY : libmavros-quaternion-utils-test
+
+# fast build rule for target.
+libmavros-quaternion-utils-test/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/build
+.PHONY : libmavros-quaternion-utils-test/fast
+
+# Convenience name for target.
+mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_eus: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
@@ -226,81 +256,6 @@ std_srvs_generate_messages_py: mavros/mavros/CMakeFiles/std_srvs_generate_messag
 std_srvs_generate_messages_py/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/std_srvs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make mavros/mavros/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/mavros_plugins.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
-
-# Convenience name for target.
-mavros_plugins: mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
-
-.PHONY : mavros_plugins
-
-# fast build rule for target.
-mavros_plugins/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/mavros_plugins.dir/build.make mavros/mavros/CMakeFiles/mavros_plugins.dir/build
-.PHONY : mavros_plugins/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
-
-# Convenience name for target.
-_run_tests_mavros_gtest_libmavros-sensor-orientation-test: mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
-
-.PHONY : _run_tests_mavros_gtest_libmavros-sensor-orientation-test
-
-# fast build rule for target.
-_run_tests_mavros_gtest_libmavros-sensor-orientation-test/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/build.make mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/build
-.PHONY : _run_tests_mavros_gtest_libmavros-sensor-orientation-test/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make mavros/mavros/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make mavros/mavros/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
@@ -393,21 +348,6 @@ std_srvs_generate_messages_nodejs/fast:
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make mavros/mavros/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 .PHONY : mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
@@ -421,66 +361,6 @@ diagnostic_msgs_generate_messages_lisp: mavros/mavros/CMakeFiles/diagnostic_msgs
 diagnostic_msgs_generate_messages_lisp/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
 .PHONY : diagnostic_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_eus: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
-
-# Convenience name for target.
-run_tests_mavros_gtest_libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
-
-.PHONY : run_tests_mavros_gtest_libmavros-quaternion-utils-test
-
-# fast build rule for target.
-run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build
-.PHONY : run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast
-
-# Convenience name for target.
-mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_lisp: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_lisp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-.PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 mavros/mavros/CMakeFiles/gcs_bridge.dir/rule:
@@ -498,49 +378,49 @@ gcs_bridge/fast:
 .PHONY : gcs_bridge/fast
 
 # Convenience name for target.
-mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_py: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+diagnostic_msgs_generate_messages_py: mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_py
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_py/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-.PHONY : trajectory_msgs_generate_messages_py/fast
+diagnostic_msgs_generate_messages_py/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+mavros/mavros/CMakeFiles/mavros_plugins.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_py: mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+mavros_plugins: mavros/mavros/CMakeFiles/mavros_plugins.dir/rule
 
-.PHONY : nav_msgs_generate_messages_py
+.PHONY : mavros_plugins
 
 # fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make mavros/mavros/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
+mavros_plugins/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/mavros_plugins.dir/build.make mavros/mavros/CMakeFiles/mavros_plugins.dir/build
+.PHONY : mavros_plugins/fast
 
 # Convenience name for target.
-mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
-.PHONY : mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
+mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
 
 # Convenience name for target.
-libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/rule
+_run_tests_mavros_gtest_libmavros-sensor-orientation-test: mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/rule
 
-.PHONY : libmavros-quaternion-utils-test
+.PHONY : _run_tests_mavros_gtest_libmavros-sensor-orientation-test
 
 # fast build rule for target.
-libmavros-quaternion-utils-test/fast:
-	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/libmavros-quaternion-utils-test.dir/build
-.PHONY : libmavros-quaternion-utils-test/fast
+_run_tests_mavros_gtest_libmavros-sensor-orientation-test/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/build.make mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test.dir/build
+.PHONY : _run_tests_mavros_gtest_libmavros-sensor-orientation-test/fast
 
 # Convenience name for target.
 mavros/mavros/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
@@ -736,6 +616,51 @@ clean_test_results_mavros: mavros/mavros/CMakeFiles/clean_test_results_mavros.di
 clean_test_results_mavros/fast:
 	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/clean_test_results_mavros.dir/build.make mavros/mavros/CMakeFiles/clean_test_results_mavros.dir/build
 .PHONY : clean_test_results_mavros/fast
+
+# Convenience name for target.
+mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_lisp: mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make mavros/mavros/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+
+# Convenience name for target.
+run_tests_mavros_gtest_libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+
+.PHONY : run_tests_mavros_gtest_libmavros-quaternion-utils-test
+
+# fast build rule for target.
+run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build
+.PHONY : run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast
+
+# Convenience name for target.
+mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f CMakeFiles/Makefile2 mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+.PHONY : mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+
+# Convenience name for target.
+_run_tests_mavros_gtest_libmavros-quaternion-utils-test: mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/rule
+
+.PHONY : _run_tests_mavros_gtest_libmavros-quaternion-utils-test
+
+# fast build rule for target.
+_run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast:
+	cd /home/nvidia/Dev/workspace/build && $(MAKE) -f mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build.make mavros/mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test.dir/build
+.PHONY : _run_tests_mavros_gtest_libmavros-quaternion-utils-test/fast
 
 src/gcs_bridge.o: src/gcs_bridge.cpp.o
 
@@ -1851,37 +1776,26 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... list_install_components"
-	@echo "... _run_tests_mavros_gtest_libmavros-quaternion-utils-test"
+	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... install"
+	@echo "... libmavros-quaternion-utils-test"
+	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... mavros_plugins"
-	@echo "... _run_tests_mavros_gtest_libmavros-sensor-orientation-test"
-	@echo "... edit_cache"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... diagnostic_msgs_generate_messages_eus"
 	@echo "... diagnostic_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... run_tests_mavros_gtest"
+	@echo "... test"
 	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_lisp"
-	@echo "... diagnostic_msgs_generate_messages_py"
-	@echo "... trajectory_msgs_generate_messages_eus"
-	@echo "... run_tests_mavros_gtest_libmavros-quaternion-utils-test"
-	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... gcs_bridge"
-	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... install"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... libmavros-quaternion-utils-test"
+	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... mavros_plugins"
+	@echo "... _run_tests_mavros_gtest_libmavros-sensor-orientation-test"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... mavros_node"
 	@echo "... run_tests_mavros_gtest_libmavros-frame-conversions-test"
@@ -1895,6 +1809,12 @@ help:
 	@echo "... run_tests_mavros_gtest_libmavros-sensor-orientation-test"
 	@echo "... _run_tests_mavros_gtest_libmavros-frame-conversions-test"
 	@echo "... clean_test_results_mavros"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... run_tests_mavros_gtest_libmavros-quaternion-utils-test"
+	@echo "... list_install_components"
+	@echo "... _run_tests_mavros_gtest_libmavros-quaternion-utils-test"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... src/gcs_bridge.o"
 	@echo "... src/gcs_bridge.i"
 	@echo "... src/gcs_bridge.s"
