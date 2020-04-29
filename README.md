@@ -14,6 +14,10 @@ This is where the majority of work is done. For the review, you'll want to read 
 
 Within this folder is the `liftoff.launch` file which does most of the configuration for the sensors and "back end" of the robot. It starts up the RPLidar, the Zed Odometry Camera, the node which converts the Zed's pointclouds to laserscans, our SLAM gmapping tech, the transformation base for the rplidar, the transformation base for the zed, the static transforms for our nodes, and the connection to the pixhawk via mavros.
 
+### tf_base
+
+This folder contains code that we wrote before we found out about a pre-built package about static transforms. It's helpful, though, to review, because it may give you a good insight into how transforms are defined. We have three CPP files, each of which handle an individual transform broadcaster. I recommend reviewing `tf_zed.cpp`. That will show you how we create a transform broadcaster, set the rate at which it publishes, and show how the quaternion rotations and vector offsets work together to creat a stamped transform. Since we don't have any moving parts in our robot (aside from the wheels), we are able to use static transforms (which can be viewed at the bottom of `liftoff.launch`) which is verified by the magic numbers put in the quaternions and vector3s. If we wanted, they could easily be variables with complicated logic that references where they are at the particular point, where they're moving from and to, etc.
+
 ### nav_base
 
 #### costmap_2d
@@ -24,7 +28,7 @@ Within this folder is the `liftoff.launch` file which does most of the configura
 
 #### base_local_planner
 
-### Manual Control
+### manual_control
 
 This is the folder that contains our `control.py` script. This is a small script that lets us control the vehicle from the command line. Essentially, it loops over standard in looking for input and converts the input into RC signals that are sent to the pixhawk. Then the pixhawk does its duty to move the wheels. It's worth reviewing the `OverrideRCIn` message [which can be found on the wiki](http://wiki.ros.org/mavros#mavros.2FPlugins.rc_io). We also have some documentation on these channels in the documentation folder.
 
