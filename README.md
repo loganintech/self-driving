@@ -26,7 +26,7 @@ This floder set up a 2D navigation stack that takes in information from odometry
 #### global_planner
 
 #### move_base
-
+In this floder, the `movebase.launch`Those Yaml files in src floder set various parameters about our robot, sensors, and map.
 
 #### base_local_planner
 
