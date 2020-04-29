@@ -19,12 +19,14 @@ Within this folder is the `liftoff.launch` file which does most of the configura
 This folder contains code that we wrote before we found out about a pre-built package about static transforms. It's helpful, though, to review, because it may give you a good insight into how transforms are defined. We have three CPP files, each of which handle an individual transform broadcaster. I recommend reviewing `tf_zed.cpp`. That will show you how we create a transform broadcaster, set the rate at which it publishes, and show how the quaternion rotations and vector offsets work together to creat a stamped transform. Since we don't have any moving parts in our robot (aside from the wheels), we are able to use static transforms (which can be viewed at the bottom of `liftoff.launch`) which is verified by the magic numbers put in the quaternions and vector3s. If we wanted, they could easily be variables with complicated logic that references where they are at the particular point, where they're moving from and to, etc.
 
 ### nav_base
+This floder set up a 2D navigation stack that takes in information from odometry, sensor streams. It also includes basic navigation stack configuration.
 
 #### costmap_2d
 
 #### global_planner
 
 #### move_base
+
 
 #### base_local_planner
 
