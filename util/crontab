@@ -1,0 +1,3 @@
+# This is the crontab we use to automatically grant us permission to use USB devices when they're plugged in, as the perms reset every time we unplug
+
+* * * * * chmod 666 /dev/ttyUSB*
