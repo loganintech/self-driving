@@ -25,7 +25,7 @@ This floder set up a 2D navigation stack that takes in information from odometry
 The costmaps use data collected by our sensors to develop a 2-dimensional occupancy grid of the system's surroundings, and "inflates" costs based on a radius-parameter that is specified by the programmer to store information about whatever obstacles there are. There are two files, which are the global_costmap and local_costmap. These are in the src folder.
 
 #### global_planner
-
+The global_planner package uses data to provide a global planner that will be used for navigation. Essentially, it uses the costmap and the size of the robot to plan a general path from A to B.
 
 #### move_base
 Before using move_base, we set up some parameters: running cost, robot radius, distance to the target position, and speed of robot movement. These parameters are in the following configuration files in the src floder
