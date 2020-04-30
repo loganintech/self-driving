@@ -31,7 +31,7 @@ Before using move_base, we set up some parameters: running cost, robot radius, d
        • costmap_common_params.yaml
        • global_costmap_params.yaml
        • local_costmap_params.yaml
-Within this floder, "move_base.launch" starts up those yaml files and 
+Within this floder, "move_base.launch" starts up those yaml files and move_base will try to make the mobile robot move to the set target point through global and local path planning.
 
 #### base_local_planner
 The base_local_planner package uses map data to search for multiple paths to the target through an algorithm, uses some evaluation criteria (whether it will collide with obstacles, time required, etc.) to select the best path, and calculates the required real-time speed and angle. The performance of path planning strategies in traditional navigation is poor. So we used teb_local_planner instead.
