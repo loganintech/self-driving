@@ -26,9 +26,15 @@ This floder set up a 2D navigation stack that takes in information from odometry
 #### global_planner
 
 #### move_base
-In this floder, the `movebase.launch`Those Yaml files in src floder set various parameters about our robot, sensors, and map.
+Before using move_base, we set up some parameters: running cost, robot radius, distance to the target position, and speed of robot movement. These parameters are in the following configuration files in the src floder
+       • base_local_planner_params.yaml
+       • costmap_common_params.yaml
+       • global_costmap_params.yaml
+       • local_costmap_params.yaml
+Within this floder, "move_base.launch" starts up those yaml files and 
 
 #### base_local_planner
+The base_local_planner package uses map data to search for multiple paths to the target through an algorithm, uses some evaluation criteria (whether it will collide with obstacles, time required, etc.) to select the best path, and calculates the required real-time speed and angle. The performance of path planning strategies in traditional navigation is poor. So we used teb_local_planner instead.
 
 ### manual_control
 
