@@ -19,9 +19,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/nvidia/Dev/workspace/src/pointcloud_to_laserscan/include"
   "/home/nvidia/Dev/workspace/devel/include"
+  "/home/nvidia/Dev/workspace/src/geometry2/tf2_ros/include"
   "/home/nvidia/Dev/workspace/src/geometry2/tf2/include"
   "/home/nvidia/Dev/workspace/src/geometry2/tf2_msgs/include"
-  "/home/nvidia/Dev/workspace/src/geometry2/tf2_ros/include"
   "/home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"

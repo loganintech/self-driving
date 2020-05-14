@@ -9,6 +9,7 @@ import queue
 import select
 from random import random
 
+milli_offset = 35
 dest_node = "/mavros/rc/override"
 
 def main():
@@ -23,10 +24,16 @@ def main():
     frame_id = 0
 
     while not rospy.is_shutdown():
-        ch = read_key()
-        if ord(ch) == 27: # If it's the escape key
+        chrs = []
+        old = time.time()
+        new = time.time()
+        while (new - old) * 1000 < milli_offset:
+            ch = read_key()
+            chrs.append(ch)
+            new = time.time()
+        if any([ord(ch) == 27 for ch in chrs]): # If it's the escape key
             exit(1)
-        ctrl = get_control(ch, frame_id)
+        ctrl = get_control(chrs, frame_id)
         frame_id += 1
         pub.publish(ctrl)
         rospy.loginfo(ctrl)
@@ -34,7 +41,7 @@ def main():
         rate.sleep()
 
 
-def get_control(char, frame_id):
+def get_control(chrs, frame_id):
 
     debugging = False
 
@@ -48,16 +55,16 @@ def get_control(char, frame_id):
 
     msg.channels = [1500, 1500, 1100, 1500, 1100, 1100, 1900, 1900]
 
-    if char == 'w':
-        msg.channels[1] = 1525
+    if 'w' in chrs and 's' not in chrs:
+        msg.channels[1] = 1550
 
-    if char == 's':
-        msg.channels[1] = 1475
+    if 's' in chrs and 'w' not in chrs:
+        msg.channels[1] = 1450
 
-    if char == 'a':
+    if 'a' in chrs and 'd' not in chrs:
         msg.channels[0] = 1100
 
-    if char == 'd':
+    if 'd' in chrs and 'a' not in chrs:
         msg.channels[0] = 1900
 
     return msg

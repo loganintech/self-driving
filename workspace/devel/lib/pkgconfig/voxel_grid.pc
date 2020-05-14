@@ -3,6 +3,6 @@ prefix=/home/nvidia/Dev/workspace/devel
 Name: voxel_grid
 Description: Description of voxel_grid
 Version: 1.16.6
-Cflags: -I/home/nvidia/Dev/workspace/src/navigation/voxel_grid/include
+Cflags: -I/home/nvidia/Dev/workspace/src/nav_base/voxel_grid/include
 Libs: -L${prefix}/lib -lvoxel_grid
 Requires: roscpp

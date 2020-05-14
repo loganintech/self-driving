@@ -3,6 +3,6 @@ prefix=/home/nvidia/Dev/workspace/devel
 Name: amcl
 Description: Description of amcl
 Version: 1.16.6
-Cflags: -I/home/nvidia/Dev/workspace/devel/include -I/home/nvidia/Dev/workspace/src/navigation/amcl/include
+Cflags: -I/home/nvidia/Dev/workspace/devel/include -I/home/nvidia/Dev/workspace/src/nav_base/amcl/include
 Libs: -L${prefix}/lib -lamcl_sensors -lamcl_map -lamcl_pf
 Requires: diagnostic_updater dynamic_reconfigure geometry_msgs nav_msgs rosbag roscpp sensor_msgs std_srvs tf2 tf2_msgs tf2_ros
