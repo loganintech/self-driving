@@ -1,8 +1,0 @@
-prefix=/home/nvidia/Dev/workspace/devel
-
-Name: test_tf2
-Description: Description of test_tf2
-Version: 0.6.6
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

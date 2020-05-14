@@ -1,8 +1,0 @@
-prefix=/home/nvidia/Dev/workspace/devel
-
-Name: tf2_sensor_msgs
-Description: Description of tf2_sensor_msgs
-Version: 0.6.6
-Cflags: -I/home/nvidia/Dev/workspace/src/geometry2/tf2_sensor_msgs/include -I/usr/include/eigen3
-Libs: -L${prefix}/lib 
-Requires: sensor_msgs tf2_ros tf2

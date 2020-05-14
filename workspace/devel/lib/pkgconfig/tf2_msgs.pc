@@ -1,8 +1,0 @@
-prefix=/home/nvidia/Dev/workspace/devel
-
-Name: tf2_msgs
-Description: Description of tf2_msgs
-Version: 0.6.6
-Cflags: -I/home/nvidia/Dev/workspace/devel/include -I/home/nvidia/Dev/workspace/src/geometry2/tf2_msgs/include
-Libs: -L${prefix}/lib 
-Requires: message_generation geometry_msgs actionlib_msgs

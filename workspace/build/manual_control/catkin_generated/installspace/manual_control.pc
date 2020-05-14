@@ -1,8 +1,0 @@
-prefix=/home/nvidia/Dev/workspace/install
-
-Name: manual_control
-Description: Description of manual_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
