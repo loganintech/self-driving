@@ -10,3 +10,5 @@
 * [slam\_gmapping](https://github.com/ros-perception/slam_gmapping)
 * [tf\_base](https://github.com/ros/geometry)
 * [zed-ros-wrapper](https://github.com/stereolabs/zed-ros-wrapper)
+
+Everything else is original works. Some files were edited within each of these folders, namely launch files.
