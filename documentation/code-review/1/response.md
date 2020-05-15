@@ -1,0 +1,1 @@
+Thanks, we tried to come up with a way for testing to work well, but too much proprietary hardware makes it very difficult.

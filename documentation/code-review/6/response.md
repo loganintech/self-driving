@@ -1,0 +1,1 @@
+Good note about the empty folders. I went in and removed them all. For the submodules that didn't track I made sure to remove their git tracking so that when you download our repo you get all of the code that we're using. I made sure to credit them, of course, with links to their respective repositories.

@@ -68,7 +68,7 @@
         }
         \begin{abstract}
         % 6. Fill in your abstract   
-        This project has been created to pressure-test the potential mishandles and abuse that could be subjected to self-driving vehicles. The platform will consist of various sensors including Lidar, Ultrasonic, and Optical sensors to support testing various companies' implementations at a miniature level. Once the car is functional, tests will be run to measure the adaptability of the system to arbitrary environments including but not limited to, rough terrain, moving obstacles, and unseen or unreachable destinations. Many factors will contribute to the viability of the platform as a whole with passenger safety as a main concern. 
+        This project has been created to pressure-test the potential mishandles and abuse that could be subjected to self-driving vehicles. The platform will consist of various sensors including Lidar, and Optical sensors to support testing various companies' implementations at a miniature level. Once the car is functional, tests will be run to measure the adaptability of the system to arbitrary environments including but not limited to, rough terrain, moving obstacles, and unseen or unreachable destinations. Many factors will contribute to the viability of the platform as a whole with passenger safety as a main concern. 
         \end{abstract}     
     \end{singlespace}
 \end{titlepage}
@@ -81,7 +81,7 @@
 
 
 \section{Introduction}
-    The autonomous RC car will utilize a variety of different hardware components, such as sensors and a Nvidia Autonomy-Designed Computer. In terms of software, it will also include common machine learning libraries like OpenCV and Tensorflow w/ Keras. 
+    The autonomous RC car will utilize a variety of different hardware components, such as sensors and a Nvidia Autonomy-Designed Computer. In terms of software, we will be heavily using the Robot Operating System(ROS). 
     
     Some key constraints include: 
     \begin{itemize}
@@ -99,7 +99,7 @@
 \bigskip
 
 \subsection{Scope}
-    The scope of work for this project is to create a unified system that links together multiple machine learning / self driving car technologies to create a unified platform that allows a research to configure the platform for testing. Some companies, like NVIDIA (the manufacturer of the brain in our system) provide object detection libraries for optical recognition, but don't expand that to LIDAR, Ultrasonic, or other detection methods. The platform will let the researcher configure which sensors and technologies are used to test them in different scenarios.
+    The scope of work for this project is to create a unified system that links together multiple self driving car technologies to create a unified platform that allows a researcher to configure the platform for testing.
 \bigskip
 
 \section{Functional Requirements}
@@ -111,7 +111,7 @@
 \bigskip
 
 \subsubsection{Sensors}
-    The platform will utilize a combination of Lidar, Ultrasonic, and Optical sensors for obstacle detection and route planning. Firstly, Lidar will be serving as the short-range, high-accuracy sensor. This will help the platform make fine-grained judgments about its capabilities at the close range. For example, the car may not be able to tell from a distance if a particular rock is scalable, but when approaching it could use the Lidar to determine height, depth, or incline of the rock, and determine if its something it can drive over. Next, we will use Ultrasonic sensors for mid-range detection of rough objects. For example, Ultrasonic could help identify walls, cars, or significant path blockers.  Lastly, we will be using Optical Sensors, which is the longest range sensor on the platform. This sensor should be able to be the only functioning sensor and still have the platform work, as it’s capable of both long-range and short-range interpolation. It’s important that the system is able to switch between different sensors as required. It is important to note that companies that specialize in building autonomous vehicles use different sensors. For instance, Tesla does not rely on  Lidar to identify objects in the path, but rather Optical. The goal is to test different implementations of object avoidance, which means mixing and matching the specifications of different companies' implementations. 
+    The platform will utilize a combination of Lidar, and Optical sensors for obstacle detection and route planning. Firstly, Lidar will be serving as the short-range, high-accuracy sensor. This will help the platform make fine-grained judgments about its capabilities at the close range. For example, the car may not be able to tell from a distance if a particular rock is scalable, but when approaching it could use the Lidar to determine height, depth, or incline of the rock, and determine if its something it can drive over. Next, we will use longer range Lidar sensors for mid-range detection of rough objects. For example, it could help identify walls, cars, or significant path blockers.  Lastly, we will be using Optical Sensors, which is the longest range sensor on the platform. This sensor should be able to be the only functioning sensor and still have the platform work, as it’s capable of both long-range and short-range interpolation. 
 
 \subsubsection{Car Body}
     The car body provided is sturdy and has sufficient space to mount various objects, such as the Lidar units, Optical sensors, and Nvidia unit. It's been modified to provide a suitable flat surface for mounting different sensors. Aesthetics are not a goal of this project.
@@ -130,7 +130,7 @@
 
 
 \subsubsection{NVIDIA AGX Xavier}
-    In order to implement the use of artificial intelligence for our autonomous vehicle, we will be using the NVIDIA Jetson AGX Xavier to provide us with the processing power that is necessary for our project. The Xavier is loaded with AI tools like NVIDIA Jetpack and DeapStream SDKs, as well as TensorRT. TensorRT is one of the main tools that will be used to provide the driving, routing, and avoiding capabilities as it comes pre-configured with Obstacle Detection and Image Classification networks. Obstacle Detection will be one of the primary uses of TensorRT for this project.
+    The NVIDIA AGX Xavier will serve as the brain of the car. It will allow us to connect all of our sensors to it, and run ROS in order to easily use the data from the sensors. 
 \bigskip
 
 \subsection{Software}
@@ -154,7 +154,7 @@
     
     \bigskip
 
-    \noindent Overall, the software should be able to implement accurate environmental \textit{perception} and \textit{localization}; in other words, it should ensure that the car is able to process and categorize data by their "semantic meaning;" this includes small obstacles, pedestrians and animals. Localization entails that the car is able to determine where it is with respect to these obstructions. Furthermore, at a higher level, the software should ensure that the car is able to properly generate a series of steps (i.e. \textit{plan}) to achieve the overarching goal - which is primarily to safely maneuver from the start point, hit all the adjacent nodes, to the end point.[1]
+    \noindent Overall, the software should be able to implement accurate environmental \textit{localization}; Localization entails that the car is able to determine where it is with respect to obstructions. Furthermore, at a higher level, the software should ensure that the car is able to properly generate a series of steps (i.e. \textit{plan}) to achieve the overarching goal - which is primarily to safely maneuver from the start point, hit all the adjacent nodes, to the end point.[1]
 
 \bigskip
 
@@ -166,7 +166,7 @@
     The hardware components of this project are very expensive, which presents us with having to make sure the vehicle has the proper safety measures in place. The vehicle will need to have a manual control switch that will immediately override the autonomous mode and give full control to the physical controller. This will ensure that if anything is to go badly, we will be able to correct it. It is also very important that we ensure the vehicle will not flip or collide while running; one way to do this is to limit the weight of materials mounted on top of the car body. By doing so, the risk of tipping over while making sharp turns will be mitigated. One of the most important features of autonomous vehicles is accident avoidance. Considering the cost of the parts we will be using, it is important to implement accident and obstacle avoidance as soon into the project as possible. 
     
 \subsection{Quality}
-    The overall quality of the car should be very high; it should manage to avoid all the right obstacles while scaling the proper ones; it should be able to follow a designated path; it shouldn't require any human interaction. Our system's quality will be judged with multiple tests. The vehicle will be tested on how quickly it can recognize a potentially hazardous situation and avoid it. For example, can the car avoid an oncoming vehicle at speeds of 10MPH, 20MPH, or 30MPH. Another quality test will be seeing how well the vehicle can navigate an environment filled with many different dynamic, and static obstacles. The vehicle will also be required to be able to correctly navigate to a given GPS location, or correctly say that it cannot reach that destination and return to start. In order for obstacle avoidance to be of quality, the car will need to be able to correctly judge what obstacles are able to be run over and which ones need to be avoided. Lastly, the visual quality of the car is not important.
+    The overall quality of the car should be very high; it should manage to avoid all the right obstacles while scaling the proper ones; it should be able to follow a designated path; it shouldn't require any human interaction. Our system's quality will be judged with multiple tests. The vehicle will be tested on how quickly it can recognize a potentially hazardous situation and avoid it. For example, can the car avoid an oncoming vehicle at speeds of 10MPH, 20MPH, or 30MPH. Another quality test will be seeing how well the vehicle can navigate an environment filled with many different dynamic, and static obstacles. The vehicle will also be required to be able to correctly navigate to a given GPS location, or correctly say that it cannot reach that destination and return to start. 
     
 \subsection{Security}
     While this platform in and of itself doesn't require a locked-tight security system, it's important to note that self-driving vehicles may be especially prone to theft. Particularly, self-driving cars have the capacity to be stolen remotely through the internet, as many if not all of them have a form of over the air updates. This means that, with the right exploit, hackers could tell your car to leave your house or they could simply walk up to it with the right device and unlock it. Our project does have the requirement that the self-driving mode can be remotely deactivated. This is important in situations where the self-driving capabilities fail or misjudge an obstacle. Note, though, that this project also expects the car to be capable of driving itself back to its launching point if it loses signal with the remote. Additionally, the car should be able to tell when its attempts at movement are failing, in the case that it flips over.

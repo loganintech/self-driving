@@ -1,0 +1,1 @@
+Interesting note about the assertions. Truthfully, the only assertions that would make sense are for things that are hard coded values that never change (IE, static transforms).
