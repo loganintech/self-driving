@@ -1,0 +1,1 @@
+Trial and error was definitely a big part of this project. We were hoping to have spring quarter to test things out in bigger spaces, with different configurations, better odometry (which sometimes fails and makes the car try and crash).
