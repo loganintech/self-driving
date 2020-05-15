@@ -16,13 +16,12 @@
         <param name="general/resolution" value="3"/>
 	<param name="pos_tracking/odometry_frame" value="zedodom"/>
     </node>
-    
+
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="zed_pointcloud_to_laserscan" output="screen">
 	<remap from="cloud_in" to="/zedodom/point_cloud/cloud_registered"/>
         <remap from="scan" to="/zed/scan"/>
         <param name="scan_time" type="double" value="0.01"/>
     </node>
-
 
     <node pkg="gmapping" type="slam_gmapping" name="slam_provider" output="screen">
         <remap from="scan" to="/lidar/scan"/>
@@ -33,19 +32,19 @@
         <param name="delta" value="0.1" />
     </node>
 
-<!--
-    <node pkg="tf_base" type="tf_broadcaster" name="rplidar_tf" output="screen"></node>
-    <node pkg="tf_base" type="tf_zed" name="zed_tf" output="screen"></node> -->
+    <!--
+        <node pkg="tf_base" type="tf_broadcaster" name="rplidar_tf" output="screen"></node>
+        <node pkg="tf_base" type="tf_zed" name="zed_tf" output="screen"></node> 
+    -->
 
     <!-- Let's use "x y z yaw pitch roll" instead of the quaternion solution -->
     <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 0 0 0 base_link zed_left_camera_frame 10"/>
     <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 3.14 0 0 base_link circle_laser_frame 10"/>
     <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 0 0 0 base_link zed_camera_center 10"/>
+   <!-- <node pkg="tf" type="static_transform_publisher" name="odom_link" args="0 0 0 0 0 0 odom base_link 10"/> -->
 
     <include file="$(find mavros)/launch/px4.launch">
     </include>
 
-    <node pkg="rf2o_laser_odometry" type="rf2o_laser_odometry_node" name="laser_odom" output="screen">
-        <param name="laser_scan_topic" value="/lidar/scan"/>
-    </node>
+    <include file="/home/nvidia/Dev/workspace/src/move_base/move_base/move_base.launch"/>
 </launch>
