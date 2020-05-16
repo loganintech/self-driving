@@ -84,7 +84,7 @@ TebLocalPlannerROS:
  # Homotopy Class Planner
 
  enable_homotopy_class_planning: True
- enable_multithreading: True
+ enable_multithreading: False
  simple_exploration: False
  max_number_classes: 4
  roadmap_graph_no_samples: 15

@@ -38,13 +38,14 @@
     -->
 
     <!-- Let's use "x y z yaw pitch roll" instead of the quaternion solution -->
-    <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 0 0 0 base_link zed_left_camera_frame 10"/>
-    <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 3.14 0 0 base_link circle_laser_frame 10"/>
-    <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 0 0 0 base_link zed_camera_center 10"/>
+    <node pkg="tf" type="static_transform_publisher" name="zed_l_tf" args="-0.05 0.15 0.08 0 0 0 base_link zed_left_camera_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="rp_lidar_tf" args="0 0 0.08 3.14 0 0 base_link circle_laser_frame 1000"/>
+    <node pkg="tf" type="static_transform_publisher" name="zed_c_tf" args="0.0 0.15 0.08 0 0 0 base_link zed_camera_center 1000"/>
    <!-- <node pkg="tf" type="static_transform_publisher" name="odom_link" args="0 0 0 0 0 0 odom base_link 10"/> -->
 
     <include file="$(find mavros)/launch/px4.launch">
     </include>
 
     <include file="/home/nvidia/Dev/workspace/src/move_base/move_base/move_base.launch"/>
+
 </launch>

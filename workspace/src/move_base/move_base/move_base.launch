@@ -15,5 +15,4 @@
         <param name="controller_frequency" value="10.0" />
         <remap from="/cmd_vel" to="/mavros/setpoint_velocity/cmd_vel_unstamped"/>
     </node>
-
 </launch> 

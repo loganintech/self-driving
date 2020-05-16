@@ -56,10 +56,10 @@ def get_control(chrs, frame_id):
     msg.channels = [1500, 1500, 1100, 1500, 1100, 1100, 1900, 1900]
 
     if 'w' in chrs and 's' not in chrs:
-        msg.channels[1] = 1550
+        msg.channels[1] = 1575
 
     if 's' in chrs and 'w' not in chrs:
-        msg.channels[1] = 1450
+        msg.channels[1] = 1425
 
     if 'a' in chrs and 'd' not in chrs:
         msg.channels[0] = 1100
